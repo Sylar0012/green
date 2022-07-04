@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*전체 하늘색박스*/
+section{
+	width:95%; 
+	box-sizing:border-box;
+	padding:20px; 
+	background:#aff;
+	margin:0 0 100px;} /*전체 하늘색박스*/
+
+/* 학습주제 */
+h2, h3, h4{
+	padding:20px; color:#fff;
+	font-size:18px; line-height:1.3em;}
+h2{background:#00f;}
+h3{background:#0af;}
+h4{background:#F30;}
+
+/*학습내용 정리*/
+textarea{
+	width:100%; 
+	height:500px;
+	box-sizing:border-box;
+	background: #fff;
+	padding:20px 0;
+	border:1px solid #333;
+	font-size:18px; line-height:1.5em;
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-bottom:20px;}
+
+/*이론 메모장 높이지정*/
+.ht2{height:250px;} 
+.ht3{height:350px;}	
+.ht4{height:450px;}
+.ht5{height:500px;}
+.ht6{height:600px;}
+.ht7{height:700px;}
+.ht8{height:800px;}
+.ht9{height:900px;}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>22_태그배치1_display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0 ;
+        }
+        a{
+            color: #222;
+            text-decoration: none;
+        }
+        img{
+            vertical-align: none;
+            border: none;
+        }
+        ul{
+            list-style: none;
+        }
+        #list1{
+         
+        }
+
+        #list1 ul{
+            text-align: right;
+            /* 
+            <ul> ,<il> 태그는 블럭요소이므로 {text-align:center}속성으로 가운데 배치되지 못함. 
+            =>현재 <li>태그가 {display:inline-block}요소로 변환되어서 글자 ,lnline요소 가은데 배치 속성이 적용될수 있는 상황.
+            */
+            
+            
+        }
+                
+        #list1 ul li{
+            background: #f77;
+            width: 120px;
+            height: 16px;
+            display: inline-block;
+            text-align: center;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 12px 0;
+            
+            /* h40 */
+            /* color: #fff; */
+            /* 사이트 리셋 할때 a태그에 색 걸어놔서 안바뀜. */
+        }
+        /* 브라우저들은 초기 기본값이 12px line-height는 1~1.2배 */
+        /* 잘안쓰임. 원하지 않는 값(공백)이 들어가기 때문 */
+        #list1 ul li:nth-of-type(1){
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;            
+        }
+        #list1 ul li:nth-of-type(4){
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+        #list1 ul li a{
+            color: #fff;
+            /* a태그에 포함된 글자색상은 항상
+            a태그에게 color값을 지정해야함. */
+        }
+        #list1 ul li:hover{
+            background: #fc0;
+        }
+        #list1 ul li:hover a{
+            color:#222;
+        }
+        
+        #list2{} 
+        #list2 ul{
+            font-size: 0;
+        }
+        #list2 ul li {
+            display: inline-block;
+            border-right: 1px solid #222;
+            font-size: 16px;
+            line-height: 16px;
+            /* margin-right: -4px; < 호환성문제로 안될 수 있음 */
+            padding:0 20px;
+            /* 
+            {display:inline-block}
+                => 문제점 : 인라인요소 특징으로 스페이스바 한탄의 여백이 우측으로 들어가있음.
+                                여백이 없어야 실제 ui의 여백값이 정확히 적용 가능함.
+                1) margin값 음수로 사용 : margin-right: -4px;
+                2) 글자크기 변경 : 부모태그에게 font-size:0; 해당 태그 font-size:값;지정
+                                        (float사용시 여백은 생기지 않음.)            
+                
+            */
+        }
+        #list2 ul li:last-child{
+            border-right: none;
+            padding-right: 0;
+        }
+        #list2 ul li a{}
+
+        body{
+            font-size: 16px;
+            line-height: 22px;
+        }/* 사이트 초기화 설정 */
+        .nh1{
+            background: #dff;
+            font-size: 50px;
+            line-height: 50px;
+        }
+        .nh2{
+            background: #ddf;
+            font-size: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="list1">
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </div><!-- #list1 -->
+    <div id="list2">
+        <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">언어선택</a></li>
+        </ul>
+    </div><!-- #list2 -->
+    <p class="nh1">줄높이 간격 50</p>
+    <p class="nh2">줄높이 간격 100</p>
+</body>
+</html>

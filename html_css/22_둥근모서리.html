@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>22_둥근모서리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            color: #111;
+            text-decoration: none;
+        }    
+        ul{
+            list-style: none;
+        }
+        img{
+            border: none;
+            vertical-align: top;
+        }
+        .d1, .d2, .d3{
+            width: 200px;
+            height: 200px;
+        }
+        /* 코드 정리를 위해 한번에 적음 */
+        .d1{
+            background: #fc2;
+            -webkit-border-radius: 50px;/* 웹 호환성 */
+            border-radius: 50px;
+        }
+        .d2{
+           background: #e53;
+           border-radius: 80px 0 10px 50px;
+           /* 
+           border-top-left-radius 
+           border-top-right-radius
+           border-bottom-left-radius
+           border-bottom-right-radius
+           =>안먹힐 경우 풀어씀
+
+           {border-radius: 값1 값2 값3 값4;}
+           {border-radius: 좌상 우상 우하 좌하;}
+           => 시계방향, 4모서리 각각다를때 설정.
+
+           {border-radius: 값1 값2;}
+           => 대각선의 위치한 모서리의 값이 동일할때 줄여쓸수 있음
+           */
+        }
+        .d3{
+            background: #35e;
+            border-radius: 200px;
+
+        }
+        .pagination{}
+        .pagination ul {}
+        .pagination ul li{
+            width: 10px;
+            height: 10px;
+            background: #bcc;
+            border-radius: 10px;
+            /* display: none; */
+            text-indent: -9999px;
+            display: inline-block;
+            /* 
+            글자만 화면상 출력안되게 할때
+            1){text-indent:-9999px}
+                : 글자 왼편으로 내어쓰기 9999px이동. 수치 변화주면 안됨
+            2){color:transparent}
+                : 글자 색상만 투명. 글자 공간 위치는 인식됨.
+            */
+        }
+        .pagination ul .active{
+            background: #e53;
+            width:  80px;
+        }
+        .pagination ul li a{
+            display: block;
+        }
+        /* 들여쓰기 */
+        #t1{
+            text-indent: 100px;
+        }
+        #t2{
+            text-indent: -100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">둥근모서리 4방향</div><!-- .d1 -->
+    <div class="d2">둥근모서리 다르게</div><!-- .d2 -->
+    <div class="d3">둥근모서리 정원</div><!-- .d3 -->
+    <br>
+    <br>   
+    <div class="pagination">
+        <ul>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+    </div><!-- .pagination -->
+    <br>
+    <br>
+    <div id="t1">들여쓰기 첫번째 문장입니다.</div>
+    <div id="t2">들여쓰기 두번째 문장입니다.</div>
+    <div>기본 내용입니다.</div>
+</body>
+</html>

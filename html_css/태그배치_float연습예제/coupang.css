@@ -1,0 +1,112 @@
+@charest 'utf-8';
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+ul{
+    list-style: none;
+}
+img{
+    border: none;
+    vertical-align: top;
+}
+
+.coupang{
+    width: 980px;
+    background: #fee;
+}
+.coupang h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.coupang .product::after{
+    content: "";
+    display: block;
+    clear: both;
+} 
+.coupang .product ul li{
+    width: 278px;
+    padding: 10px;
+    margin-right: 40px;
+    background: #fff;
+    border: 1px solid #333;
+    float:left;   
+}
+.coupang .product ul li:last-child{
+    margin-right: 0;
+}
+.coupang .product img{
+    width: 278px;
+}
+/* 
+ .coupang .product ul li .photo img {
+    width: 278px;
+    height: auto;
+ }
+ 들어가야할 사진 크기는 정해져있는데 사진 크기에 따라 안맞을수 있음
+ =>height: auto;로 잡아줌.
+ */
+.coupang .product .info .name{
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.coupang .product .info .num{
+    padding: 5px 0;
+}
+.coupang .product .info .num::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.coupang .product .info .num .discount{
+    float: left;
+    padding: 0 10px 0 0;
+    font-size: 36px;
+    font-weight: bold;
+    color:#f00;
+}
+.coupang .product .info .num .price{
+    float:left;
+}
+.coupang .product .info .num .price .origin{
+    font-size: 16px;
+    color:#aaa;
+    text-decoration: line-through;
+    display: block;
+}
+.coupang .product .info .num .price .cost{
+    font-size: 18px;
+    text-decoration: bolder;
+    display: block;
+}
+.coupang .product .category{
+    font-size: 11px;
+    padding: 10px 0 30px 0;
+    border-top: 1px solid #666;
+}
+.coupang .product .category .new{
+    float: left;
+    padding:3px;
+    border:1px solid #f00;
+    color:#f00;
+}
+.coupang .product .category .amount{
+    float: right;
+    text-align: right;
+    color: #666;
+}
+.coupang .product .category .amount strong{
+    color:#222;
+}
+
+/* 
+.coupang .product ul li:hover{
+    border: 1px solid #09f;
+} 
+사용자가 마우스커서를 상품에 올리면 색변화
+*/

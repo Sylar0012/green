@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>19_여백</title>
+    <style>
+        div{
+            width: 120px;
+            height: 60px;
+            background: #ccc;
+        }
+        .m1{
+            background: #fc0;
+            /*margin: 30px;*/
+            /*margin-top: 50px;*/
+            /*margin-left: 30px;*/
+            /*margin-right: 20px;*/
+            /*margin-bottom: 20px;*/
+            /*margin:50px 20px 20px 30px;*/
+            /* 
+            위와 같이 적으면 시계방향으로 적용. (위 우 아래 좌)
+            사이트의 구조 특징상 안될수도 있음. 그럴땐 풀어서 적어야함.
+            */
+            /*margin: 30px 25px 10px;*/ 
+            /* 
+            위와 같이 적으면 좌우가 같아짐.(중간px값이 좌우값)
+            */
+            margin:15px 30px;
+            /* 상하 15px, 좌우 30px */
+
+            /* 
+            margin: 값1; 
+            (기본값, 사방으로 동일값적용)
+
+            margin: 값1 값2;
+            (위 = 아래, 좌 = 우)
+
+            margin: 값1 값2 값3;
+            (위 좌 = 우 아래)
+
+            margin: 값1 값2 값3 값4;
+            (위 오른 아래 왼 : 시계방향으로 적용)
+            */
+
+            /* padding값도 같은방식으로 적용 */
+        }
+        .p1{
+            background: #0ee;
+            border: 1px solid #333;
+            padding: 30px 15px 20px 50px;
+        }
+        /* 
+        박스는 크나 실제 컨텐츠 공간은 좁아짐. 여백에는 컨텐츠 추가 불가
+        margin과 같은방식. 
+        */
+    </style>
+</head>
+<body>
+    <div>기본박스</div>
+    <div class="m1">margin사방</div>
+    <br>
+    <br>
+    <br>
+    <div>기본</div>
+    <div class="p1">패딩사방으로적용 개별값적용 확인하기</div>
+</body>
+</html>

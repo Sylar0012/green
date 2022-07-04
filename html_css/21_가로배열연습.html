@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>21_가로배열연습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            color: #111;
+            text-decoration: none;
+        }
+        img{
+            border: none;
+            vertical-align: top;
+        }
+        /* 기본 셋팅값 (기본 브라우저 특성 및 태그 특성 초기화) */
+        
+        #test{
+            background: #ffa;
+            width: 420px;
+        }
+        #test::after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        #test p{
+            width: 130px;
+            height: 130px;
+            background: #fc0;
+            float: left;
+            margin-right: 15px;
+        }
+        #test p:last-child{
+            margin-right: 0;
+        }
+        #space{
+            padding:50px 0;          
+        }
+        #box1{
+            background:#d943a7;
+            width: 320px;
+        }
+        #box1::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #box1 p{
+            width: 100px;
+            height: 100px;
+            background: #edc0e3;
+            float: left;
+            margin-right: 10px;
+        }
+        #box1 p:last-child{
+            margin-right: 0;
+        }
+        #box2{
+            background: orange;
+            width: 525px;
+        }
+        #box2::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #box2 p{
+            width: 120px;
+            height: 120px;
+            background: yellow;
+            margin-right: 15px;
+            float: left;
+        }
+        #box2 p:last-child{
+            margin-right: 0;
+        }
+        #box3{
+            background: #27b864;
+            width: 541px;
+        }
+        #box3::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #box3 p{
+            width: 118px;
+            height: 118px;
+            margin-right: 20px;
+            border: 1px solid #111;
+            float: left;
+            background:#b0ebc9 ;
+        }
+        #box3 p:last-child{
+            margin-right: 0;
+        }
+        #box4{
+            background: blue;
+            width: 370px;
+        }
+        #box4::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #box4 p{
+            width: 110px;
+            height: 110px;
+            margin-right: 20px;
+            background: skyblue;
+            margin-bottom: 20px;
+            float: left;
+        }
+        #box4 p:nth-child(3n){
+            margin-right: 0;
+        }
+        #box5{
+            background: #faa;
+            width: 370px;
+        }
+        #box5::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #box5 p{
+            width: 110px;
+            height: 110px;
+            background: #fce;
+            float: left;
+            margin: 0 20px 20px 0;
+        }
+        #box5 p:nth-child(3n){
+            margin-right: 0;
+        }
+        /* 
+        p태그 안에 내용이 많이 들어가 있는경우, nth-child로 안되는 경우가 많음
+        => p태그에 class를 줘서 해결
+        */
+    </style>
+</head>
+<body>
+    <div id="test">
+        <p>연습1</p>
+        <p>연습2</p>
+        <p>연습3</p>
+    </div>
+    <div id="space"></div>
+    <div id="box1">
+        <p>d1_1</p>
+        <p>d1_2</p>
+        <p>d1_3</p>
+    </div>
+    <div id="space"></div>
+    <div id="box2">
+        <p>d2_1</p>
+        <p>d2_2</p>
+        <p>d2_3</p>
+        <p>d2_4</p>
+    </div>
+    <div id="space"></div>
+    <div id="box3">
+        <p>d3_1</p>
+        <p>d3_2</p>
+        <p>d3_3</p>
+        <p>d3_4</p>
+    </div>
+    <div id="space"></div>
+    <div id="box4">
+        <p>d4_1</p>
+        <p>d4_2</p>
+        <p>d4_3</p>
+        <p>d4_4</p>
+        <p>d4_5</p>
+        <p>d4_6</p>
+    </div>
+    <div id="space"></div>
+    <div id="box5">
+        <p>d5_1</p>
+        <p>d5_2</p>
+        <p>d5_3</p>
+        <p>d5_4</p>
+        <p>d5_5</p>
+        <p>d5_6</p>
+    </div>
+</body>
+</html>

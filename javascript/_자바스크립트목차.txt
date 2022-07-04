@@ -1,0 +1,37 @@
+자바스크립트 javascript
+
+변수 var
+
+자료형---
+1문자형 string
+2숫자형 number
+3논리형 boolean
+4빈데이터
+
+연산자---
+1사칙연산 +, -, *, / , %
+2비교연산자 >, <, >=, <= ,,,
+3논리연산자 ==, !== ,,,
+4증감연산자 ++, --
+5복합대입연산자 +=, -=,,,,
+
+조건문---
+if
+if else
+else if
+
+반복문---
+while
+do while
+for
+
+함수 function()
+
+객체---
+내장객체
+DOM Document Object Model
+배열 array
+날짜
+BOM Browser Object Model
+
+

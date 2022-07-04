@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>벤더프리픽스</title>
+    <!-- 
+        브라우저별 호환성을 맞추기 위하여 사용함
+        http://caniuse.com < 브라우저별 태그 or 스타일시트의 호환성을 알려줌                           
+    -->
+</head>
+<body>
+    <h1>벤더피리픽스(vendor prefix)</h1>
+    <p>
+        각 브라우저마다 css3 속성중 표준안으로 확정되지 않는 속성이 있음. 
+        이때 해당하는 브라우저 접드어를 붙여야 각 개별 브라우저 별로 대응함.
+
+        -webkit- : 크롬, 사파리 ,안드로이드, 아이폰 브라우저 적용
+        <!-- 사용자가 많아 대부분 사용 -->
+        -moz- : 파이어폭스, 모질라 브라우저
+        -ms- : ie, 엣지
+        -o- : 오페라 브라우저
+    </p>
+    <p>
+        ex) 
+        #box{
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -me-border-radius:10px;
+            -o-border-radius:10px;
+            border-radius:10px;
+        }
+        <!-- 모든 브라우저에 적용하려면 모두 다 적어줘야함. -->
+    </p>
+</body>
+</html>

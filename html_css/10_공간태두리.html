@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>10_공간 태두리</title>
+</head>
+<body>
+    <div style="width:100px; height:100px;background: #3cf;"></div>
+    <div><center>글자 작성</center></div>
+    <span style="width: 100px; height: 100px; background: #ff0;">인라인요소</span>
+    <!-- 공간값은 블록요소만 인식함. ex)div 태그
+           인라인요소는 공간인식 못함. ex)span 태그 -->
+    <br>
+    <br>
+    <br>
+    <div style="background: #cf0; width: 200px; height: 200px; border:5px solid #33f; "></div> <br>
+    <!-- 
+        사이즈 맞출경우 태두리와 박스 값을 합쳐서 계산해야함.
+        ex) width:200px, heigt:200px, border:5px = total 210px
+    -->
+    <div style="width:150px; height:150px; background:#555; border-top:5px dotted #f00; text-align:center">위쪽점선</div> <br>
+    <div style="width:150px; height:150px; background:#ff0; border-right:5px dashed #00f;">오른쪽실선</div> <br>
+    <div style="width:150px; height:150px; background:#fce; border-bottom: 5px solid #000;">아래쪽기본선</div> <br>
+    <div style="width:150px; height:150px; background:#090; border-left:5px dotted #f0c;">왼쪽점선</div>
+    <!-- dotted(점선),dashed(실선),solid(기본선) 잘쓰임 -->
+    <br>
+    <br>
+    <br>
+    <div style="width: 300px; height: 300px; background: #ddd; border-top: 30px dashed #f00; border-right: 10px solid #00f; border-bottom: 15px dotted #d09; border-left: 20px solid #050;">사방으로</div>
+    <!-- 각 부위마다 색을 다르게 지정하면 구역을 반씩 차지함.-->
+    <br>
+    <br>
+    <br>
+    <h2>그외 태두리 종류</h2>
+    <p style="border:5px double #e0f;">테두리 이중선</p>
+    <p style="border:10px ridge #aaf">테두리 돌출선</p>
+    <p style="border:10px groove #aaf">테두리 그루브</p>
+    <p style="border:10px inset #aaf">테두리 안쪽</p> <!-- 간혹 쓰임-->
+    <p style="border:10px outset #aaf;">테두리 볼록형</p>
+    <p style="border:none ">테두리 없애기</p>
+<!-- 
+    태그에 공간값을 적용할때 (박스 사각형으로 적용)
+    - 모든 태그는 투명함, 글자, 이미지, 색상 없으면 디자인x
+      (웹에서 공간으로 인식하고 있다.)
+    - 블록요소 태그에만 적용가능.(인라인 불가)
+
+    width:숫자px height:숫자px
+
+    * 태그에 태두리 줄때 (기본사방)
+    border: 선두께 선모양 선색상;
+    border: 5px solid #f00;
+
+    border-width : 선두께
+    border-style : 선모양
+    border-color : 선색상
+
+    * 선모양 대표3가지
+    solid : 기본선
+    dotted : 점선
+    dashed : 실선
+ -->
+
+</body>
+</html>

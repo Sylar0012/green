@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>15_스타일전체</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background:#f6f;
+        }
+        #d1{
+            width: 300px;
+            height: 300px;
+            background: #000;
+        }
+        .D1{
+            border:5px solid #30f;
+            width: 100px;
+            height: 100px;
+        }
+        /* 
+        == 스타일의 우선 순위 ==
+        : 스타일시트는 상속 개념과 캐스케이팅(cascasding)개념 이해 중요.
+
+        1. 스타일은 작성 순서에따라 단계적으로 적용됨
+            :캐스케이딩개념 위-아래로 흐르는 스타일시트 라는뜻.
+        
+        2. 스타일은 상속됨.
+            : 태그들과의 포함관계에 따라 부모태그> 자식태그 요소라고 함.
+            부모태그 속성은 자식태그요소에서 상속됨.(위-아래 전달)
+
+        3. 동일 지정 순위를 갖는 스타일인 경우 나중에 적힌 스타일이 적용됨.
+        (=css는 항상 마지막에 적용된 스타일이 최종적용)
+        
+        inline style > id > class > tag
+
+        */
+    </style>
+
+
+</head>
+<body>
+    <!-- 1.인라인스타일시트 (모든 우선순위중 최상위) -->
+    <div style="width: 100px; height:100px; background:#fc0"></div>
+    
+    <!-- 2.내부스타일시트 -->
+    <div></div>
+    <p></p>
+    <div id="d1"></div>
+    <div class="D1"></div>
+    <!--
+        마지막에 색이 들어오는 이유는 div에 첫번째로 색을 넣었기 때문.
+      -->
+</body>
+</html>

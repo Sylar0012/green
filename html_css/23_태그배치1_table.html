@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>23_태그배치1_table</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border:1px solid #333;
+            font-size: 50px;
+        }
+        .table{
+            display: table;
+            /* width: 100%; */
+            width: 600px;
+        }
+        .table_row{
+            display: table-row;
+        }
+        .table_cell{
+            display: table-cell;
+            height: 200px;
+            background: #aee;
+            /* 높이를 줘서 공간을 만듦 */
+         }
+        .table_cell.t{
+            vertical-align: top;
+        }
+         /* table_cell과 t와 붙어있는 class를 써야할때 붙혀씀 */
+         .m{
+            vertical-align: middle;
+         }
+         .b{
+            vertical-align: bottom;
+            /* table에서만 사용가능 */
+         }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="table_row">
+            <div class="table_cell">1-1</div>
+            <div class="table_cell">1-2</div>
+            <div class="table_cell">1-3</div>
+        </div><!-- .table_row -->
+        <div class="table_row">
+            <div class="table_cell t">2-1</div>   
+            <div class="table_cell m">2-2</div>   
+            <div class="table_cell b">2-3</div>
+            <!-- class= "class1 class2" < class1 class2 동시 선택. -->   
+        </div><!-- .table_row -->
+        </div><!-- .table -->
+</body>
+</html>

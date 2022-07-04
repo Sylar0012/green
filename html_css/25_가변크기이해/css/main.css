@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+h1, h2{
+    margin : 20px;
+}
+
+textarea{
+    width: 85%;
+    height: 300px;
+    border: 1px solid #333;
+    margin:15px;
+    padding:15px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#percent{
+    width: 80%;
+    height: 200px;
+    background: #fcc;
+}
+#percent .per{
+    width: 50%;
+    height: 150px;
+    background: #cdd;
+}
+#percent .per .cent{
+    width:50%;
+    height:100px;
+    background: #abb;
+}
+/* 
+부모태그 w 기준으로 공간을 비례적용 
+%비율의 단위.
+
+== 가변크기로 컨텐츠를 가로배열 할때 ==
+가로전체 : 100% 
+2개 : 50% 
+3개 : 33.3333%
+4개 : 25%
+5개 : 20%
+6개 : 16.6666
+=> 소수점 3~5자리까지 작성.
+*/
+
+#d1{
+    width: 51.0416%;
+    background: #ccc;
+}
+
+#d1 p{
+    height: 300px;
+    float: left;
+}
+#d1 p:nth-child(1){
+    width: 35.7142%;
+    background: #f6c;
+}
+#d1 p:nth-child(2){
+    width: 20.4081%;
+    background: #fc2;
+}
+#d1 p:nth-child(3){
+    width: 43.8775%;
+    background:#5fd;
+}
+
+/* 
+== 가변 공식 ==
+(원하는w / 부모w) x 100 = n%
+
+(980/1920)x100= 51.0416% < 1920= uesr 해상도
+(350/980)x100= 35.7142%
+(200/980)x100= 20.4081%
+(430/980)x100= 43.8775%
+*/
+
+#d2 p{
+    width: 400px;
+    height: 200px;
+    background: #aee;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+#d2 .p1{
+    box-sizing:content-box;
+    /* 
+    기본값. 실제 컨텐츠 공간, 영역 자체가
+    w, h 속성의 범위로 인식됨 
+    */
+}
+#d2 .p2{
+    box-sizing:border-box;
+    /* 
+    테두리 끝-끝 영역의 w, h 속성의 범위로 인식.
+    : width, height 안에 padding, border값 포함해줌.
+    : margin 불포함.(바깥영역)
+    */
+}
+
+#d3{
+    background: #ddd;
+    margin: 3%;/* 베젤사이즈 */
+}
+#d3 p{
+    width: 22%;
+    height: 150px;
+    background: #5af;
+    float: left;
+    margin-right: 4%;
+}
+#d3 p:last-child{
+    margin-right: 0;
+}
+
+/* 
+모바일 화면 : 500px
+모바일베젤 : 15px (15/500)x100= 3%
+박스 4 : 각110px; (110/500)x100= 22%
+사이여백 : 20px; (20/500)x100= 4%
+*/

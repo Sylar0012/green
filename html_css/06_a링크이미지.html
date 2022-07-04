@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>a링크 이미지</title>
+</head>
+<body>
+    <div>
+        <a href="http://naver.com" style="text-decoration: none;">네이버로 이동하기</a>
+    </div>
+    <!-- 
+        a태그 사용형식 : <a href='경로'>글자 or 이미지</a>
+        a태그 기본속성 : 밑줄, 글자색상 (파랑, 클릭후 보라), 손모양 마우스커서
+     -->
+     <div>
+        <a href="http://naver.com" target="_blank">네이버 새탭으로 이동하기</a>
+     </div>
+     <div>
+        <a href="http://naver.com" target="_self">네이버 현재창에서 이동하기</a>
+    </div>
+    <!-- 
+        a태그의 target속성 : 링크를 열 장소를 지정
+        target='_blank' => 새탭에서 열기
+        target='_self' => 기본값(현재창열기)
+     -->
+     <img src="naver.jpg" alt = "네이버로고">
+     <!-- 
+        img태그 사용형식
+        <img src = "이미지 경로" alt = "이미지에 대한 설명글">
+        alt 속성 : 이미지 대체 텍스트. 웹접근성을 위해 사용해야함.
+        (기본적으로 화면에 나오지 않음. 단 이미지가 보이지 않는 경우에 화면에 글자로 표기)
+     -->
+    <div>
+        <a href="http://naver.com"target='_blank'> <img src="naver.jpg" alt = "네이버로고"></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utg-8">
+    <title>11_색상단위</title>
+</head>
+<body>
+    <div style="background:red">키워드</div>
+    <div style="background:#ff0000">
+        헥스코드<br>
+        검정 : #000
+        흰색 : #fff
+        빨강 : #f00
+        초록 : #0f0
+        파랑 : #00f
+    </div>
+    <div>RGB : red 빨강/ green 초록 / blue 파랑
+            0~ 255숫자
+            {background:rgb(255,0,0)}
+    </div>
+    <div>RGBA : 색상값 rgb alpha투명도를 더해 표현
+        {background:rgba(0,0,0,0.5)}
+          => 검정 투명도 50% (투명도 0~1 소숫점 단위)
+    </div>
+    <div>HSL (색상 hue / saturation 채도 / lightness(명도)
+        h 색상 : 0~360도 (빨강 0 or 360 / 120 녹색 / 240 파랑)
+        s 채도 : 0~100% (0%회색 / 100% 원톤)
+        명도 : 0~100% (0% 검정 / 100% 흰색)
+        {background:hsl(0,100%,70%)} : 빨강 원톤 밝기 70%
+    </div>
+    <div style="background:linear-gradient(to right, #f00, #fc0);">
+        그라데이션
+        {background:linear-gradient(방향, 시작색상, 끝색상)}
+        방향 : to top / to bottom / to right / to border-left
+        대각선 : to bottom right 
+        각도로 표기 : 0deg 아래-위/ 90deg 왼-오른(시계방향)
+        -색상 : 키워드, #, rgb, rgba 값 모두 사용가능
+    </div>
+</body>
+</html>

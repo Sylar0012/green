@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        div{
+            color:#90f; 
+        }
+        #nameID{
+            width:100px;
+            height: 100px;
+            background: yellow;
+            color: #000;
+            /* 
+            나중에 적힌것이 최종으로 덮어씀 
+            */
+        }
+        .nameClass{
+            font-size: 30px;
+            color: #f00;
+            font-weight: bold;
+            /* 
+            클래스는 중복 가능.
+            */
+        }
+        .RED{
+             color: #f00;
+        }
+        #event{
+            width:600px;
+            height:600px;
+            background:orange;
+            border: 3px solid #00f;
+        }
+
+        #event h2{
+            text-align: right;           
+        }
+
+        #event .photo{
+            text-align: center;
+            /* 
+            text-align 속성은
+            1) 글자 정렬 왼/가운데/오른쪽 변경
+            2) 인라인요소 태그들도 정렬가능.
+            <span> <strong> <a> <img>... 
+            */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>13스타일내부</title>
+</head>
+<body>
+    <div id="nameID">id선택자</div>
+    <div class="nameClass">class선택자</div>
+    <div>
+        <h1>백엔드 개발</h1>
+        <ol>
+            <li class="RED">Python</li>
+            <li>JAVA</li>
+            <li class="RED">C++</li>
+            <li>PHP</li>
+        </ol>
+    </div>
+    <div id="event">
+        <h2>이벤트영역</h2>
+        <p class="photo">
+            <img src="img/visual1.jpg" alt="강아지사진">
+        </p>
+    </div>
+</body>
+</html>

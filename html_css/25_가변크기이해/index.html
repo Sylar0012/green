@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- 엣지 호환 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 보는 기기 호환성 -->
+    <title>25_가변크기이해</title>
+    <link a href="css/reset.css" rel="stylesheet">
+    <link a href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <h1>가변크기 이해</h1>
+    <h2>1) Fluid Grid 가변크기 이해</h2>
+    <textarea>
+        가변그리드 : 디바이스 크기에 따라 자유롭게 늘어나거나 줄어들 수 있도록 px, % 단위로 제작하는 방법.
+
+        * 가변적이란 ?
+          사이즈가 유동적으로 커졌다/줄었다 하는 성질.
+
+        * 가변그리드 레이아웃은 가로너비가 줄었다/늘었다 하면서 높이값이 변경되기 떄문에 높이값은 %로
+          잘 반환하지 않음
+
+        == 가변 그리드 공식 ==
+        (w원하는 사이즈px/ w부모사이즈) x 100 = n%   
+         예) (300/980) x 100 = 30.6122% => 소숫점 2~5자리까지 표기하는것이 좋음
+    </textarea>
+    <textarea>
+        1) pc 전용 사이트 : 데스크탑 모니터 최소크기 user 고려하여 safe-area 지정된 공간에 contents들을 배치
+                                     (해상도 사이즈 기준 : 960 1080 1280 1140 1600 1920 ..)
+
+        2) 반응형 사이트 (Respomsive Web) : 1개의 html, css 문서로 모바일, 테블릿, pc등의 다양한 디바이스 환경에 
+            따라 스크린 해상도와 os환경의 웹서비스를 제공하는 개념. (viewport, media query, break ponit등을 활용.)
+        
+        3) 모바일전용 (Adaptive Web, 적응형웹) 
+            : server 단이나 client에서 웹에서 접근한 디바이스를 체크하여 해당 디바이스에 맞춤형으로 웹서비스를 
+            제공하는 개념. 각각의 디바이스별 각각 제작을 해야함. url 주소앞에 m.이 붙어있음
+            ex)m.naver.com > 네이버의 경우 pc,적응형 웹, 반응형 어플리케이션 모두 제공.
+    </textarea>
+    <h2>단순 % 개념 이해</h2>
+    <div id="percent">
+        <div class="per">
+            <div class="cent">%개념 이해</div>
+        </div>
+    </div>
+    <h2>고정크기(px) 가변크기(%)로 변환</h2>
+    <div id="d1" class="cf">
+        <p>350</p>
+        <p>200</p>
+        <p>430</p>
+    </div><!-- d1 w980 -->
+    <h2>box-sizing</h2>
+    <div id="d2" class="cf">
+        <p class="p1">
+            {box-sizing:content-box} <br>
+            가로너비 : 400 + 20 + 20 = 440px<br>
+            세로높이 : 200 + 20 + 20 = 240px<br>
+        </p>
+        <p class="p2">
+            {box-sizing:border-box} <br>
+            가로너비 : 400px<br>
+            세로높이 : 200px<br>
+        </p>
+    </div>
+    <h3>
+        가변마진 ,패딩<br>
+        (마진px / 부모px) x 100 = n%<br> 
+        (패딩px / 부모px) x 100 = n% <br>
+    </h3>
+    <div id="d3" class="cf">
+        <p>박스1</p>
+        <p>박스2</p>
+        <p>박스3</p>
+        <p>박스4</p>
+    </div>
+</body>
+</html>

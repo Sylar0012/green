@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>17_a링크 가상클래스</title>
+    <style>
+        a{
+            color: #222;
+            text-decoration: none;
+        }
+        /* 
+        a링크 상태변화에 따른 가상클래스 선택자
+        : a링크 클릭시 웹브라우저 화면 상단으로 위치이동하는 특징을 가짐
+
+        a링크의 상태변화전 항상 초기화 설정을 적용해야함.
+        글자색 : 검정 (#111, #222등. #000 사용x)
+        밑줄 없애기 : {text-decoration:none}
+        밑줄 : {text-decoration: underline;}
+        */
+
+        a:link{
+            color:#f00;
+        }
+
+        a:hover{
+            color:#0f0;
+            text-decoration: underline;
+        }
+
+        a:active{
+            background: #fe0;
+        }
+
+        a:visited{
+            color: #f3c;
+        }
+
+        a:focus{
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <div><a href="한번도 클릭한적 없는 상태">link</a></div>
+    <div><a href="링크위에 마우스를 올린 상태">hover</a></div><!-- 조정 빈도수 높음 -->
+    <div><a href="마우스로 클릭하고 있는 동안 상태">active</a></div>
+    <div><a href="이미 방문한 후의 상태">visited</a></div>
+    <div><a href="tab키 초점이 맞춰진 상태  ">focus</a></div>
+    <div style="height: 3000px; background:#ccc;"></div>
+    <div>
+        <a href="#">임시링크</a> <!-- 링크안에 #을 임시로 표기함 -->
+    </div>
+</body>
+</html>

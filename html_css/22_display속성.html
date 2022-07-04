@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>22_display속성</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background: #faa;
+            display: inline-block;
+            /* 
+            inline-block : 인라인요소 + 블록요소 특징 둘다가짐.
+            - 인라인요소. 
+            - 블럭요소(공간인식. 세로정렬x)
+            */
+            /* display:block; */
+        }
+        p{
+            width: 100px;
+            height: 50px;
+            background: #fea;
+        }
+        p strong{
+            display: none;
+
+        }/* 안보이게 처리 */
+        p:hover strong{
+            display: block;
+        }/* 마우스 p hover시 strong 보이게 처리 */
+    </style>
+</head>
+<body>
+    <div>div태그</div>
+    <div>div태그</div>
+    <div>div태그</div>
+    <br>
+    <span>span태그</span>
+    <span>span태그</span>
+    <span>span태그</span>
+    <br>
+    <p>
+        <strong>strong태그</strong>
+    </p>
+
+</body>
+</html>
