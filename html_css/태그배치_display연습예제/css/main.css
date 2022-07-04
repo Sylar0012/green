@@ -90,7 +90,7 @@
     margin-right:40px;
 }
 #wrap .contents .event:last-child{
-    margin: 0;
+    margin-right: 0;
 }
 #wrap .contents .event .photo{
     width: 300px;
