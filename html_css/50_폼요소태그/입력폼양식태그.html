@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력폼양식태그</title>
+    <style>
+        ul, li{
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>입력폼 양식 태그</h1>
+    <!-- 
+        <form name="입력폼이름" action="웹프로그램페이지" method="전달방식">
+            <input type="폼 기능요소(text id name ...)" name="인풋이름" value="전송값">
+        </form>
+     -->
+     <form>
+        <fieldset>
+            <legend>로그인 정보</legend><!-- 제목 -->
+            <ul>
+                <li>
+                    <label for="id">아이디 : </label> <!-- for = 'id' > input에 #id와 연결 -->
+                    <input type="text" name="user_id" placeholder="아이디 입력" id="id" ><!-- 인라인 요소 -->
+                </li>
+                <li>
+                    <label for="psw">비밀번호 : </label>
+                    <input type="password" name="user_password" placeholder="비밀번호 입력" id="psw">
+                </li>
+            </ul>
+        </fieldset>
+     </form>
+</body>
+</html>

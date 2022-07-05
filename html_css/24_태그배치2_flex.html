@@ -1,0 +1,316 @@
+<html>
+
+<head>
+    <title>태그배치2_flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 학습위한 공통template css */
+        h2 {
+            margin: 30px;
+        }
+
+        .wrap {
+            background: #ddd;
+            font-size: 16px;
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>1) flex / flex item 배치방향</h2>
+    <div class="wrap f1">
+        <div id="d1">d1 첫째</div>
+        <div id="d2">d2 둘째</div>
+        <div id="d3">d3 셋째</div>
+    </div>
+    <!--.wrap-->
+    <style>
+        .f1 {
+            display:flex;
+            width: 62.5%;
+            flex-direction:column-reverse;
+        } 
+            /*
+             (1200/1920) x 100 = 62.5
+             flex특징: 모든컨텐츠 한줄에 정렬. 
+             자식이 px단위라도 부모가 %단위라 알아서 정리해줌.
+            */
+            /* 
+            flex-direction : 플렉스 아이템 방향
+             - 주축을 가로, 세로로할지 결정.
+             - 지정하지 않을 경우 가로(기본값)
+            
+              flex-direction:row (float:left와 비슷, 기본값) 
+              flex-direction:row-reverse (flaot:right와 비슷)
+              flex-direction:column (세로 정배열)
+              flex-direction:column-reverse (세로 역배열)
+
+            */
+        .f1>div {
+            height: 300px;           
+        }
+
+        .f1>#d1 {
+            background: #08f;
+            width: 50%;
+        }
+
+        .f1>#d2 {
+            background: #6bf;
+            width: 33.3333%;
+        }
+
+        .f1>#d3 {
+            background: #cef;
+            width: 16.6666%;
+        }
+    </style>
+
+
+
+
+
+    <h2>2) flex item 여러줄배치</h2>
+    <div class="wrap f2">
+        <div id="d1">d1 첫째/ 600px</div>
+        <div id="d2">d2 둘째/ 400px</div>
+        <div id="d3">d3 셋째/ 200px</div>
+    </div>
+    <!--.wrap-->
+    <style>
+        .f2 {
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap-reverse;
+        }
+        /* 
+            flex-wrap : 플렉스 아이템 줄배치
+            - 주축을 기준으로 한줄배치 기본
+            - flex-wrap:no-wrap
+            - flex-wrap:wrap
+            - flex-wrap:wrap-reverse
+            */
+
+        .f2>div {
+            height: 70px;
+        }
+
+        .f2>#d1 {
+            background: #f44;
+            width:600px;
+        }
+
+        .f2>#d2 {
+            background: #f9a;
+            width:400px;
+        }
+
+        .f2>#d3 {
+            background: #fcd;
+            width:200px;
+        }
+    </style>
+
+
+
+
+
+    <h2>3) flex속성 동시적용 </h2>
+    <div class="wrap f3">
+        <div id="d1">d1 첫째/ 600px</div>
+        <div id="d2">d2 둘째/ 400px</div>
+        <div id="d3">d3 셋째/ 200px</div>
+    </div>
+    <!--#wrap-->
+    <style>
+        .f3 {
+            display:flex;
+            flex-flow: column wrap;
+        }
+
+        .f3>div {
+            height: 70px;
+        }
+
+        .f3>#d1 {
+            background: #f90;
+            width: 600px;
+        }
+
+        .f3>#d2 {
+            background: #fe0;
+            width: 400px;
+        }
+
+        .f3>#d3 {
+            background: #ff9;
+            width: 200px;
+        }
+    </style>
+
+
+
+
+
+    <h2>4,5) main / cross axis 다양하게 배치</h2>
+    <div class="wrap f4">
+        <div id="d1">d1 첫째/ 400px</div>
+        <div id="d2">d2 둘째/ 300px</div>
+        <div id="d3">d3 셋째/ 200px</div>
+    </div>
+    <!--.wrap-->
+    <style>
+        .f4 {
+            height: 250px;
+            display: flex;
+            justify-content:space-between;
+        }
+        /*
+        justify-content : 주축배열 여백값 조정
+        justify-content:flex-start // 좌로정렬
+        justify-content:felx-end  // 우로정렬
+        justify-content:center // 중앙정렬
+        justify-content:space-around // 각 컨텐츠별 여백을 균등하게 부여해줌
+        justify-content:space-between // 첫번째, 마지막 컨텐츠 좌우에 붙이고 나머지 space-around와 같음
+        */
+        .f4>div {
+            height: 70px;
+        }
+        /* 
+        align-tiems : 한줄일 경우
+        align-tiems:stretch
+        align-tiems:center
+        align-tiems:flex-start
+        align-tiems:flex-end
+        align-tiems:baseline
+        */
+        .f4>#d1 {
+            background: #d4f;
+            width: 400px;
+            font-size: 20px;
+        }
+
+        .f4>#d2 {
+            background: #f8f;
+            width: 300px;
+            font-size: 50px;
+        }
+
+        .f4>#d3 {
+            background: #fcf;
+            width: 200px;
+            font-size: 10px;
+        }
+
+        /*
+        justify-content:flex-start | flex-end | center | space-around | space-between
+        */
+    </style>
+
+
+
+
+
+    <h2>6) cross axis 개별배치</h2>
+    <div class="wrap f5">
+        <div id="d1">d1 첫째/ 400px</div>
+        <div id="d2">d2 둘째/ 400px</div>
+        <div id="d3">d3 셋째/ 400px</div>
+    </div>
+    <!--.wrap-->
+    <style>
+        .f5 {}
+
+
+        .f5>div {
+            height: 100px;
+            width: 100%;
+        }
+
+        .f5>#d1 {
+            background: #faa;
+        }
+
+        .f5>#d2 {
+            background: #afa;
+        }
+
+        .f5>#d3 {
+            background: #aaf;
+        }
+
+        /*
+         align-content:stretch | flex-start | flex-end | center | space-around |  space-between
+        */
+    </style>
+
+
+
+
+
+    <h2>7) flex item 배치순서변경</h2>
+    <div class="wrap f7">
+        <div id="d1">d1 첫째</div>
+        <div id="d2">d2 둘째</div>
+        <div id="d3">d3 셋째</div>
+    </div>
+    <!--.wrap-->
+    <style>
+        .f7 {}
+
+        .f7>div {
+            height: 100px;
+        }
+
+        .f7>#d1 {
+            background: #fac;
+        }
+
+        .f7>#d2 {
+            background: #afc;
+        }
+
+        .f7>#d3 {
+            background: #acf;
+        }
+    </style>
+
+
+
+
+
+    <h2>8) flex item 크기조절</h2>
+    <div class="wrap f8">
+        <div id="d1">d1 첫째</div>
+        <div id="d2">d2 둘째 넒어짐</div>
+        <div id="d3">d3 셋째</div>
+    </div>
+    <!--.wrap-->
+    <style>
+        .f8 {}
+
+        .f8>div {
+            height: 100px;
+        }
+
+        .f8>#d1 {
+            background: #ffc;
+        }
+
+        .f8>#d2 {
+            background: #fe1;
+        }
+
+        .f8>#d3 {
+            background: #fc0;
+        }
+    </style>
+
+</body>
+</html>

@@ -6,22 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>표태그_추천요금제</title>
 </head>
-<body>
-<table style="width: 500px; border:1px solid #333;">
+<body><!-- caption, thead, tfoot, tbody로 작성순서 잡아야함. 웹표준 때문에 사용. -->
+<table style="width: 500px; border:1px solid #333;" cellpadding="0" cellspacing="0">
+    <!-- 
+        cellpadding, cellspacing 은 cell마다 공간감을 줌
+        cellpadding : 칸안에 들어가는 여백
+        cellspacing : margin
+    -->
     <caption style="background:#333; color:#fff; font-size:18px; height:30px; font-weight:bold;">SK텔레콤 추천 요금제</caption>
-    <thead style="background:#ccc; height:30px;"><!-- 바뀌지 않는 thead내용 -->
+    <thead style="background:#ccc; height:30px;"><!-- 바뀌지 않는 thead내용(표기준) -->
         <tr>
-            <td>상품명</td>
-            <td>용량</td>
-            <td>월정액</td>
+            <th style="border: 1px solid #333;">상품명</th>
+            <th style="border: 1px solid #333;">용량</th>
+            <th style="border: 1px solid #333;">월정액</th>
+            <!-- th => 칸의 해더. 다음목록을 불러와도 th안의 값은 안바뀜 -->
         </tr>
     </thead>
-    <tfoot><!-- 바뀌지 않는 tfoot내용 -->
+    <tfoot style="background:#fe9; color:#f00"><!-- 바뀌지 않는 tfoot내용(표기준) -->
         <tr>
-            <td>추천요금제순의 요금제 리스트 입니다.</td>
+            <td colspan="3">추천요금제순의 요금제 리스트 입니다.</td><!-- colspan="3" : 3칸 합치기  -->
+           <!--  
             <td></td>
-            <td></td>
+            <td></td> 
+            위의 colspan='3' 때문에 웹에선 5칸(3+<td>2개)으로 인식하기 때문에 아래 td 지워야함.
+            -->
         </tr>
+
     </tfoot>
     <tbody>
         <tr>
@@ -41,6 +51,21 @@
         </tr>
     </tbody>
 </table>
-<!-- thead, tfoot, tbody로 작성순서 잡아야함. 웹표준 때문에 사용. -->
+<!-- 
+    *웹 표준을 위한 테이블 태그
+    <caption></caption> : 표 제목(표 컨텐츠 바로위, 가운데 정렬)
+    <th></th> : table td header. 글자 두껍게, 가운데정렬
+    <thead></thead> : 표의 상단 (제목)
+    <tfoot></tfoot> : 표의 하단
+    <tbody></tbody> : 표의 본문내용
+    
+    *표 자체 태그 속성
+    colspan 속성 : 가로칸 합치기
+    rowspan 속성 : 세로칸 합치기
+
+    colspan="3" : 합치는 칸의 갯수 작성. 합친후 나머지 <td> 삭제.
+    
+
+ -->
 </body>
 </html>

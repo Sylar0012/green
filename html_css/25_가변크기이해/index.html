@@ -9,6 +9,7 @@
     <link a href="css/main.css" rel="stylesheet">
 </head>
 <body>
+    display:flex 이해위한 내용
     <h1>가변크기 이해</h1>
     <h2>1) Fluid Grid 가변크기 이해</h2>
     <textarea>
@@ -72,5 +73,69 @@
         <p>박스3</p>
         <p>박스4</p>
     </div>
+    <div>
+        <h2>상대단위 em(비례적용)</h2>
+        <textarea>
+            em 단위 : 상대적인 단위. 배수로 적용
+            
+            1em = 1배수
+            
+            부모 태그 글자크기가 지정되었을 경우 , 자식태그 글자크기 상속받음.
+            단, 사용되어지는 속성에 따라 기준이 달라짐. 주로 폰트와 관련된 속성에서 많이 적용되어짐.
+
+            1em = 16px = 대문자M
+            기본 : 글자크기px / 16 = em
+
+            ex)부모태그 : 16px
+                자식태그 : 1em (=16px)
+                자식태그 : 1.5em (=16 * 1.5 =24px)
+            -----------
+            선택자 {font-size:32px; line-height:1em;}
+            => 폰트32와 동일하게 줄높이 1em(1배) = 32px 적용 => 폰트 = 줄높이
+        </textarea>
+
+        <h2>상속문제해결 rem</h2>
+        <textarea>
+           rem단위 : root em(최상위 개념), 최상위 html태그를 기준으로 인식하기 떄문에 상속문제 발생x
+           
+           예) reset.css : 16px > 태그상관없이 : 1rem(=reset 기준 16)
+
+        </textarea>
+        <ul class="text">
+            <li class="em">em단위</li>
+            <li class="rem">rem단위</li>
+        </ul>
+    </div>
+    <h2>가변폰트</h2>
+    <textarea>
+        가변폰트 : 커졌다 작어졌다 하는 폰트.
+
+        vw단위 : viewport width (뷰포트 1vw=1%)
+        vh단위 : viewport height (뷰포트 1vh=1%)
+
+        뷰포트 : 실제 보이는 화면의 크기
+
+        * 스크린 크기에 맞춰 상대적 크기를 반환
+        전체 : 100vw / 100vh
+
+        * 일반크기 측정 사용가능.
+    </textarea>
+    <h2>가상클래스 기본</h2>
+    <textarea>
+        가상태그를 생성해서 사용할 수 있는 태그.
+        : html문서 작성 안했지만, 태그처럼 나오게 할 수 있음.
+
+        선택자::before{} => 선택자 첫째자식 자리에 가상태그를 생성
+        선택자::after{} => 선택자 막내자식 자리에 가상태그를 생성
+
+        - 가상태그 : 인라인요소
+        - 가상태그를 사용하기위해 필수속성 : content:"";
+    </textarea>
+    <div id="box1">
+        <div class="d1">
+            <strong>클래스 d1 strong태그 기준</strong>
+        </div><!-- .d1 -->
+    </div><!-- #box1 -->
+
 </body>
 </html>
