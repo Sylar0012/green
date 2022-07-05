@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3_자료형_2숫자형</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        2) 숫자형 Number
+    </h2>
+    <textarea class="ht5">
+        2) 숫자형 Number
+        - 따옴표 없이 숫자만 사용가능.
+        - 소수점 사용가능.
+
+        var 변수=숫자;
+        var num='77'; // 숫자가 아닌 문자형으로 인식
+        
+    </textarea>
+    <h3>연산자의 종류<br>
+        1) 사칙연산자
+    </h3>
+    <textarea class="ht5">
+        덧셈 +
+        뺄셈 -
+        곱셈 *
+        나눗셈 / 
+        나머지 % : 나눗셈의 나머지값 반환. (홀짝구분)
+        --------------
+        - 우선순의 : 사칙연산 기본순위 동일 (* / + -)
+    </textarea>
+    <script>
+        console.log('사칙연산 시작');
+        console.log(17);
+        console.log(10+5);
+        console.log(7-4);
+        console.log(5*2);
+        console.log(15/3);
+        console.log(10%3); // 나머지값
+
+        console.log('변수사용 사칙연산');
+        var x=5;
+        var y=10;
+        console.log(x+y);
+        console.log(x*y);
+        console.log(x/y);
+        console.log(x%y);
+
+        //숫자를 0으로 나누기
+        var a=1/0;
+        console.log(a); // infinity 값 출력
+
+        //문자열 나누기 숫자
+        var smile='happy'/2
+        console.log(smile); // NaN : not a number 숫자가 아님
+
+        console.log('문자결합연산자');
+        
+        //문자형 + 문자형 = 하나의 문자형
+        var t1='오늘은 ';
+        var t2='화요일 입니다';
+        console.log(t1+t2);
+
+        var s1='방탄소년단';
+        var s2='은 월드스타 입니다.';
+        var bts;
+        bts=s1+s2;
+        console.log(bts);
+
+        var month='8월';
+        var date='15일';
+        document.write(month + date+'<br>');
+        document.write('광복절은'+month+date+'입니다.<br>');
+
+        // 숫자형 + 문자형 = 문자형으로 변형
+        var grade=70; // 숫자형
+        console.log(grade + '점 입니다.');
+
+    </script>
+
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+
