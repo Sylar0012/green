@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력폼양식태그</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <h1>입력폼 양식 태그</h1>
+    <!-- 
+        <form name="입력폼이름" action="웹프로그램페이지" method="전달방식">
+            <input type="폼 기능요소(text id name ...)" name="인풋이름" value="전송값">
+        </form>
+     -->
+     <form>
+        <fieldset>
+            <legend>로그인 정보</legend><!-- 제목 -->
+            <ul>
+                <li>
+                    <label for="id">아이디 : </label> <!-- for = 'id' > input에 #id와 연결 -->
+                    <input type="text" name="user_id" placeholder="아이디 입력" id="id" minlength="4" maxlength="8" size="10">
+                    <!-- main.css참조 -->
+                </li>
+                <li>
+                    <label for="psw">비밀번호 : </label>
+                    <input type="password" name="user_password" placeholder="비밀번호 입력" id="psw">
+                    
+                </li>
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend>개인정보 입력</legend>
+            <ul>
+                <li>
+                    <label for ="name">이름 : </label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="major">전공학과 : </label>
+                    <input type="text" id="major">
+                </li>
+                <li>
+                    <h3>성별이 무엇인가요?</h3>
+                    <input type="radio" id="m" name="gen"> 
+                    <label for="m">남성</label>
+                    <input type="radio" id="fm" name="gen">
+                    <label for="fm">여성</label>
+                    <!-- name이 같으면 하나만 선택 가능. -->
+                </li>
+            </ul>
+        </fieldset>
+     </form>
+</body>
+</html>

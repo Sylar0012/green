@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25_포지션</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            background: #cfc;
+            height: 300px;
+            /* 
+             #d1안의 포함된 p태그 모드 position속성값으로 독립, 분리되어 사이트에서 인식하지 못함
+             => 아래태그 작성을해야 하므로 강제로 높이값을 잡아 공간을 인식 시킬것.
+             (웹사이트 ui구조를 작성할때 절때 이렇게 높이값을 잡아서는 안됨.)
+             */
+        }
+        #d1 p{
+            width:100px;
+            height: 100px;
+            background: #0c0;        
+        }
+        #d1 .p1{
+            position:absolute;
+            top: 0;
+            left: 0;
+        }
+        #d1 .p2{
+            position: absolute;
+            top:100px;
+            left:100px;
+        }
+        #d1 .p3{
+            position: absolute;
+            top:200px;
+            left:200px;
+        } 
+        /* 
+        position을 가지면 독립개체가되어 웹에서 인식 못함
+        포지션 가지면 z축 가장위로 감( 겹치기 가능)
+        */
+        #d2{
+            background: #fee;
+            width: 400px;
+            position:relative;
+            /* 
+            위치 기준을 부모태그에 잡아줘야 함.
+            안잡으면 다른것들과 겹침
+            */
+        }
+        #d2 p{
+            width:100px;
+            height: 100px;
+            background: #f00;
+            
+        }
+        #d2 .p1{
+            margin-bottom: 300px;
+        }
+        #d2 .p2{
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+        #d2 .p3{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        #d2 .p4{}
+        /* 
+        {position:absolute} 사용시 부모태그에게 {position:relative} 를 항상 적용해줘야 함.
+        : 기준이다 라는 뜻으로 사용하는데, 만약 부모에게 이 기준이 없다면 브라우저 위치기준으로 인식하게 될것임;
+        */
+
+        #d3{
+            background:#cf0;
+            width: 400px;
+            position:relative;
+        }
+        #d3 p{
+            width: 100px;
+            height: 100px;
+            background: #3cf;
+        }
+        #d3 .p1{}
+        #d3 .p2{
+            position: absolute;
+            top:0;
+            right:0;
+            background: #f60;
+
+        }
+        #d3 .p3{}
+        #d3 .p4{}
+        #d3 .p5{
+            position: absolute;
+            bottom: 0;
+            left:100px;
+        }
+        #d3 .p6{
+            position:absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p class="p1">d1_1</p>
+        <p class="p2">d1_2</p>
+        <p class="p3">d1_3</p>
+    </div>
+    <div id="d2">
+        <p class="p1">d2_1</p>
+        <p class="p2">d2_2</p>
+        <p class="p3">d2_3</p>
+        <p class="p4">d2_4</p>
+    </div>
+    <div id="d3">
+        <p class="p1">d3_1</p>
+        <p class="p2">d3_2</p>
+        <p class="p3">d3_3</p>
+        <p class="p4">d3_4</p>
+        <p class="p5">d3_5</p>
+        <p class="p6">d3_6</p>
+    </div>
+</body>
+</html>
