@@ -32,7 +32,9 @@
     <div class="form">
       <label for="guessField">번호 입력: </label>
       <input type="text" id="guessField" class="guessField">
+      <!-- 입력받을 곳 -->
       <input type="submit" value="입력" class="guessSubmit">
+      <!-- 입력값 보낼 버튼 -->
     </div>
 
     <div class="resultParas">
@@ -51,40 +53,38 @@
       const lowOrHi = document.querySelector('.lowOrHi');
 
       const guessSubmit = document.querySelector('.guessSubmit');
-      const guessField = document.querySelector('.huessField');
+      const guessField = document.querySelector('.guessField');
       // html과 연결
 
       let guessCount = 1;
       let resetButton;
 
       function checkGuess() {
-        const userGuess=Number(guessField.value);
+        const userGuess = Number(guessField.value);
         // guessField의 value 값을 Number로 변경 
         if (guessCount === 1) {
-            guesses.textContent = '맞춰보셈:   ';
+            guesses.textContent = '넣은숫자들:   ';
         }
         guesses.textContent += userGuess + ' ';
 
-        if (userGuess === reandomNumber) {
-            lastResult.textContent = '맞춤';
-            lastResult.style.backgroundColor='green';
-            lowOrHi.textContent = ' ';
-            setGameOver();
+        if (userGuess === randomNumber) {
+          lastResult.textContent = '정답';
+          lastResult.style.backgroundColor='green';
+          lowOrHi.textContent = ' ';
+          setGameOver();
         } else if (guessCount === 10) {
           lastResult.textContent = '10번 다틀림';
           lowOrHi.textContent='';
-          
           setGameOver();
         } else {
-          lastResult.textContent = '틀림'
+          lastResult.textContent = '틀림';
           lastResult.style.backgroundColor='red';
           if (userGuess < randomNumber){
-            lowOrHi.textContent = '낮음';
+            lowOrHi.textContent = '입력한 수보다 높음';
           } else if (userGuess > randomNumber){
-            lowOrHi.textContent='높음';
+            lowOrHi.textContent='입력한 수보다 낮음';
           }
         }
-
         guessCount++;
         //++ : 증가 연산자. 값을 1증가 (목숨계산)
         guessField.value = ' ';
@@ -93,8 +93,40 @@
         // 
       }
       
+      guessSubmit.addEventListener('click', checkGuess);
+      /*guessSubmit에 이벤트 추가. */
       
-      
+      function setGameOver(){
+        guessField.disabled = true;/* 끝났으니 더이상 입력금지 */
+        guessSubmit.disabled = true;/* 끝났으니 더이상 제출금지 */
+        resetButton = document.createElement('button'); /* 하단부에 재시작 버튼생성 */
+        resetButton.textContent = '다시시작';
+        document.body.append(resetButton);
+        resetButton.addEventListener('click', resetGame);
+      }
+
+      function resetGame(){
+        guessCount = 1; /* 목숨값 1로 변경 */
+        
+        const resetParas = document.querySelectorAll('.resultParas'); 
+        /* resultParas에 입력된 값 모두 지정 */
+        for (const resetPara of resetParas){
+          resetPara.textContent = '';
+        }
+
+        resetButton.parentNode.removeChild(resetButton);
+        
+        guessField.disabled = false;
+        guessSubmit.disabled = false;
+        guessField.value = '';
+        guessField.focus();
+
+        lastResult.style.backgroundColor = 'white';
+
+        randomNumber = Math.floor(Math.random() * 100) +1;
+        /* 새로운 랜덤숫자 지정 */
+
+      } 
 
     </script>
   </body>

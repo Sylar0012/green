@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3_자료형_5빈데이터</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        null 과 undefined
+    </h2>
+    <textarea class="ht5">
+        빈데이터
+        null : 변수에 null이라는 빈값을 저장한경우. (값이 존재하지 않음)
+        undefined : 변수에 선언만 하고 값이 저장 안된경우. ( 값이 할당 안됨)
+    </textarea>
+    <script>
+        var good;
+        console.log(typeof (good));
+        
+        //var name=prompt('이름입력','');
+        //alert('환영합니다 ' + name + '님 반갑습니다!');
+        // null 다이얼로그창 : 취소 -> null 값 받음
+
+        // null을 사용할때 "user는 존재하지 않는다"
+        var user = null;
+        console.log(user); // 출력null
+
+        console.log(typeof null); //object 출력 
+        // null 객체아님. 자바스크립트 초기버전 오류.
+        // 하위버전 호환성 때문에 수정 안했음.
+
+        console.log('문자'*123);
+        console.log(typeof '문자' + 123); 
+        //string123 출력 > typeof '문자' <먼저 하고 뒤에 숫자 123더함
+
+        console.log('자료형 확인 해보기');
+        var hong = '홍길동';
+        var kim;
+
+        console.log(typeof 10);
+        console.log(typeof hong);
+        console.log(typeof true);
+        console.log(typeof kim);
+        console.log(typeof user);
+        
+    </script>
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+

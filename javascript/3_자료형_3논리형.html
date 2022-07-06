@@ -106,12 +106,34 @@
     </textarea>
     <script>
         //prompt('질문입니다','');
-        var eng=prompt('영어점수는?','');
-        var math=prompt('수학점수는?','');
+        /* 
+        var eng=prompt('영어점수는?',''); //70
+        var math=prompt('수학점수는?',''); //30
         eng=Number(eng);
         math=Number(math); // prompt는 값 받으면 string으로 받음. number로 변경
         var total=(eng+math) / 2;
         document.write(total);
+         */
+        // 출력 3515 prompt로 받은값은 문자(string)로 인식.
+        // (70 + 30) / 2 = 7030 / 2 = 3515 => 숫자로 이루어진 문자열는 사칙연산 가능 (자동 형변환)
+        //console.log(('80'+'70')/3);
+
+        //문자형, 숫자형 변환
+
+        var t1 = String(true);
+        console.log(typeof t1);
+        var nums = Number('1234');
+        console.log(typeof nums);
+
+        console.log(Number('1234abcd')); 
+        // Number로 감싸도 문자(abcd)가 포함되어 있으면 NaN값 출력.
+        console.log(Number(true));
+        console.log(Number(false));
+        // true = 1, false = 0을 의미. 
+        console.log();
+
+        
+      
     </script>
 </section>
 </body>
