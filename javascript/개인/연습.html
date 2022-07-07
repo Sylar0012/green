@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>번호 맞추기</h1>
+        <p>1~100사이 숫자 맞추기. 기회는 10번</p>
+    </div>
+    <div class=form>
+        <label for="guessField">번호 입력</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" id="guessSubmit" class="guessSubmit">
+    </div>
+    <div calss="meun">
+        <p class="guesses"></p>
+        <p class="wrongOrTrue"></p>
+        <p class="lowOrHi"></p>
+    <script>
+        let randomNumber = Math.floor(Math.random()*100) + 1;
+
+        const guessField = document.querySelector('.guessField')
+        const guessSubmit = document.querySelector('.guessSubmit')
+        const guesses = document.querySelector('.guesses')
+        const wrongOrTrue = document.querySelector('.wrongOrTrue')
+        const lowOrHi = document.querySelector('.lowOrHi')
+
+        let lifePoint = 1;
+        let resetButton;
+
+        function checkGuess(){
+        const uesrGuess = Number(guessField.value);
+        if (lifePoint === 1) {
+            guesses.textContent ='넣은 숫자들: ';
+        }
+        guesses.textContent += uesrGuess + ' ';
+         
+        if (uesrGuess === randomNumber) {
+            wrongOrTrue.textContent = '정답';
+            wrongOrTrue.style.backgroundColor = 'green';
+            lowOrHi.textContent= ' ';
+        } else if (lifePoint === 10) {
+            wrongOrTrue.textContent ='10번 다틀림';
+            wrongOrTrue.style.backgroundColor='red';
+        } else {
+            wrongOrTrue.textContent= '그거아님';
+            wrongOrTrue.style.backgroundColor='red';
+        } if(uesrGuess > randomNumber){
+            wrongOrTrue.textContent='그거보다 낮음';
+            lowOrHi.textContent=' ';
+        } else if(uesrGuess < randomNumber){
+            wrongOrTrue.textContent ='그거보다 높음';
+            lowOrHi.textContent= ' ';   
+        }
+        lifePoint ++;
+        guessField.value = ' ';
+        guessField.focus();
+        }
+        guessSubmit.addEventListener('click', checkGuess);
+    </script>       
+</body>
+</html>
