@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* wrap : 웹사이트를 전체 싸는 영역 */
+#wrap{}
+
+/* header_start---- */
+#header{
+    background: #dde;
+}
+#header .logo{
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+    /* padding-top:40px; */   
+}
+/* 
+1) 웹의 큰 구조에서 1번째 자식이 위쪽으로 여백을 가질떄 margin속성을 사용하면 실제로는 부모태그의 위로 여백을 가지게 됨. 그래서 margin값을 사용할 수 없음.
+=> 대체해서 padding으로 속성값을 적용하기도 함.
+
+2) 내가원하는 높이에서 글자를 세로 가운데 배치하는 공식.
+{height:값; line-height:값;}을 통일시키면 됨
+ */
+#header .gnb{
+    
+}

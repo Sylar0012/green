@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+body{
+    width: 500px;
+}
 h1{
     margin : 20px;
 }
@@ -53,4 +56,31 @@ required : 필수로 데이터를 입력하게 하는 속성
 <label for = "id명">텍스트</label>
 <input type="값" id="id명">
 와 같이 id를 for속성을 이용하여 input과 필수로 연결해야함.
+
+-----------------------------------
+== 선택 목록 양식 ==
+<select name="이름" size="값" multiple>
+    <option value="전송값1" selected>선택1</option>
+    <option value="전송값2">선택2</option>
+</select>
+value="값" : 서버 전송값 => 선택1을 선택시 선택1이 전송되는 것이 아니라 value 속성값 1이 전달됨.
+
+size : 미리 선택지를 펼쳐서 보여줌
+
+selected : 선택 미리 지정.
+
+multiple : 다중선택 가능 (ctrl + 클릭)
+
+==<optgroup>==
+: 선택목록이 너무 많을 경우 여러 항목을 그룹핑(하위그룹 데이터만 선택가능)
+<optgroup label="그룹명">
+    ....
+</optgroup>
+
+==<datalist>==
+:user가 선택대신 직접 입력할떄 사용.
+자동완성 기능과 유사함 <input>과 함께 사용됨
+
+list="id동일값" : 데이터 목록 선언
+label="이름" : user 표시내용. 지정안할시 value값 표시.
 */

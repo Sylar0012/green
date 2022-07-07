@@ -93,9 +93,36 @@
             top:0;
             right:0;
             background: #f60;
-
+            width: 200px;
         }
-        #d3 .p3{}
+        #d3 .p2 span{
+            display: block; 
+            /* 인라인요소는 공간을 못가지기 때문. */
+            width: 50px;
+            height: 50px;
+            background: #fc0;
+            position:absolute;
+            /*
+             position:absolute 를 쓴 부모태그 안에 또 쓰는 경우는 relative 안줘도 됨.
+             .p2의 부모인 #d3이 이미 relative를 가지고 있기 때문.
+             */
+            top:0;
+            right: 0;
+        }
+        #d3 .p3{
+            background: #f90;
+            margin-bottom: 30px;
+            position:relative;
+        }
+        #d3 .p3 span{
+            display:block;
+            width: 30px;
+            height: 30px;
+            background:#06f;
+            position:absolute;
+            bottom:0;
+            right: 0;
+        }
         #d3 .p4{}
         #d3 .p5{
             position: absolute;
@@ -107,6 +134,24 @@
             bottom: 0;
             right: 0;
         }
+        /* 
+        1) p태그 안쪽으로 블록요소 태그는 못들어옴.
+        => 인라인요소(span, strong...) 글자내용, 이미지들만 들어올 수 있음.
+
+        2) span태그 = 인라인 요소 = 공간값 못가지는 특징.
+        
+        3) 인라인 요소를 블럭요소로 변경 {display:block;}
+
+        {position:absolute}를 가진 태그는 부모태그에게 {position:relative;} 없으면 
+
+        1) 기준을 찾으러 거슬러 올라감.
+            부모 -> 조부모 -> 증조부모.. 1단계씩 올라가서 기준을 찾음. 
+            현재 #d3(조부모) 기준으로 우측 아래 .p6뒤에 깔려있어서 안보였음.
+
+        2) 1번의 경우처럼 거슬러 올라갔을때 기준이 없을경우, 최종 웹브라우저를 기준으로 자리를 인식하게 됨.
+        
+        
+        */
     </style>
 </head>
 <body>
@@ -123,8 +168,15 @@
     </div>
     <div id="d3">
         <p class="p1">d3_1</p>
-        <p class="p2">d3_2</p>
-        <p class="p3">d3_3</p>
+        <p class="p2">
+            d3_2
+            <span></span>
+        </p>
+        <p class="p3">
+            d3_3
+            <span></span>
+            <!-- p태그안에는 블럭형 요소인 어떠한 태그도 들어갈 수 없음 (p ,div 등) -->
+        </p>
         <p class="p4">d3_4</p>
         <p class="p5">d3_5</p>
         <p class="p6">d3_6</p>

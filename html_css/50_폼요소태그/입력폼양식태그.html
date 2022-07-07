@@ -49,8 +49,53 @@
                     <label for="m">남성</label>
                     <input type="radio" id="fm" name="gen">
                     <label for="fm">여성</label>
-                    <!-- name이 같으면 하나만 선택 가능. -->
+                    <!-- radio 사용시 name이 같으면 하나만 선택 가능. -->
                 </li>
+                <li>
+                    <h3>관심있는 과목은 무엇인가요?</h3>
+                    <input type="checkbox" id="html5" name="subjt">
+                    <label for="html5">html5</label>
+
+                    <input type="checkbox" id="css3" name="subjt">
+                    <label for="css3">css3</label>
+
+                    <input type="checkbox" id="js" name="subjt">
+                    <label for="js">Javascript</label>
+                    <!-- checkbox 사용시 name으로 묶어놔야 나중에 안꼬임 <~name="subjt"> -->
+                </li>
+                <li>
+                    <h3>난이도를 선택 하세요</h3>
+                    <select name="level" size="3" multiple>
+                        <!-- size="값" : 값 만큼 펼쳐서 보여줌. multiple : 중복선택 가능-->
+                        <option value="1"selected>초급</option><!-- selected : 들어가있으면 기본선택값 -->
+                        <option value="2">중급</option>
+                        <option value="3">고급</option><!-- value값을 서버에 전송함. -->
+                    </select><!-- 드롭다운 메뉴 -->
+                </li>
+                <li>
+                    <h3>전공 분야를 선택 하세요.</h3>
+                    <select>
+                        <optgroup label="design">
+                            <option>웹 디자인</option>
+                            <option>편집 디자인</option>
+                            <option>제품 디자인</option>
+                        </optgroup>
+                        <optgroup label="programing">                          
+                            <option selected>백엔드</option>
+                            <option>프론트엔드</option>
+                            <option>풀스택</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li>
+                    <h3>사용 언어를 직접 입력하세요</h3>
+                    <input type="text" name="language" list="langlist">
+                    <datalist id="langlist">
+                        <option label="한국어" value="korean"></option>
+                        <option label="영어" value="english"></option>
+                        <option label="중국어" value="chinnes"></option>
+                    </datalist>
+                </li><!-- datalist 는 input값 안의 list명칭과 같은 #id로 연결해야함. -->
             </ul>
         </fieldset>
      </form>
