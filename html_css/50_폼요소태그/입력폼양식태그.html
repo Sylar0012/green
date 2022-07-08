@@ -21,12 +21,12 @@
             <ul>
                 <li>
                     <label for="id">아이디 : </label> <!-- for = 'id' > input에 #id와 연결 -->
-                    <input type="text" name="user_id" placeholder="아이디 입력" id="id" minlength="4" maxlength="8" size="10">
+                    <input type="text" name="user_id" placeholder="아이디 입력" id="id" minlength="4" maxlength="8" size="10" required>
                     <!-- main.css참조 -->
                 </li>
                 <li>
                     <label for="psw">비밀번호 : </label>
-                    <input type="password" name="user_password" placeholder="비밀번호 입력" id="psw">
+                    <input type="password" name="user_password" placeholder="비밀번호 입력" id="psw" minlength="8" maxlength="20"  required>
                     
                 </li>
             </ul>
@@ -96,8 +96,23 @@
                         <option label="중국어" value="chinnes"></option>
                     </datalist>
                 </li><!-- datalist 는 input값 안의 list명칭과 같은 #id로 연결해야함. -->
+                <li>
+                    <h3>기타의견을 작성하세요.</h3>
+                    <textarea cols="50" rows="10" >
+                        기타의견을 자유롭게 작성해주세요.
+                    </textarea>
+                    <!-- cols : 가로길이 rows : 세로길이(줄) -->
+                </li>
             </ul>
+            <div class="btns">
+                <input type="submit" value="전송하기">
+                <input type="reset" value="다시작성">
+                <button>
+                    이전페이지 이동
+                </button>
+            </div><!-- .btns -->
         </fieldset>
      </form>
+
 </body>
 </html>
