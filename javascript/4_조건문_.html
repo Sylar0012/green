@@ -161,18 +161,12 @@
         const user_id = prompt('아이디 입력','아이디입력');
         const user_pw = prompt('비밀번호 입력', '비밀번호입력');
         
-        if(id == user_id){
-            if(pw == user_pw){
-                document.write(user_id + ' 님 반갑습니다.');
-            }else{
-                alert('암호가 맞지않습니다');
+        if(id == user_id && pw == user_pw){
+            document.write(user_id + ' 님 반갑습니다.');
+         }else{
+                alert('아이디 또는 비밀번호가 다릅니다');
                 location.reload(); //브라우저 새로고침
-            }
-        }else{
-            alert('아이디가 맞지 않습니다');
-            location.reload();
-        }
-        
+         }
     </script>
 </section>
 

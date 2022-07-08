@@ -99,15 +99,146 @@
         nums && console.log(10);
         // 1) 변수값 할당x => false => 실행불가
         // 2) 변수값 할당되었다는 자체 => true => 출력
-    </script>
+
+        /* 
+        truethy 와 falsy의 이해
+        if 조건문에서 불린 (true/false) 값으로만 표현됨.
+        
+        undefined, null.. 등의 불린값이 아닌 형태를 가진다면 불린의 값으로 형 변환 이루어져야 함
+        이런 개념을 truethy / falsy라고 함.
+        
+        falsy 값 6가지 : false, 0 undefined, null, NaN, '' => if 조건문에서 false 라고 인식시켜줌
+        6가지 값 외 나머지값을 truethy 로 변환.
+
+        *true/false와 truethy/falsy는 같은것은 아님. 
+        */
+
+        /*    let under; // 값할당이 안됨(undefined)
+        if(under === false){
+            console.log('falser와 falsy는 같다.');
+        }else{
+            console.log('둘다 다르다. 형변환만 해주는 개념.');
+        }
+        */
+       /*  var iu=1;
+        var song=10;
+        var act=20;
+        var age=30;
+        var singer;
+ 
+        //singer=iu>song || song>= act || act>age;
+        //          1>10    ||   10  >= 20 ||  20 > 30;
+        //          false     ||       false     ||    false   => false 출력
+        
+        //singer = iu>song|| song >= act || act<=age;
+        //            1>10    ||   10  >= 20 ||  20 <= 30;
+        //            false     ||       false     ||      true  => true 출력
+        // true값 나온다면 그 값을 먼저 넣는게 좋음 (act<=age가 앞으로)
+
+        //singer= iu <= song && song >= act && act <= age;
+        //          1<=10     &&    10  >= 20  &&  20 <= 30;
+        //            true       &&       false      &&     true  => false 출력
+        
+        // singer= iu <= song && song <= act && act <= age;
+        //          1<=10     &&    10  <= 20  &&  20 <= 30;
+        //            true       &&       true       &&     true  => true 출력
+                
+        
+        //singer= !(iu>age);
+        //           1>30 =false 이지만 앞에 ! 가 있어서 true 
+        //document.write('싱어는 ' + singer); 
+        */
+         /*     let age=33;
+
+        if(age>20 && age<60){
+            console.log('당신은 소집대상자 입니다.');
+        }else{
+            console.log('당신은 소집대상자가 아닙니다.');
+        }
+         */
+   /*      var score=prompt('점수를 입력 하세요','100점 만점');
+        var pass=prompt('합격점수 입력 하세요','커트라인 80'); */
+
+        /*
+        if(pass == 80 && score>=80) {
+            alert('합격입니다');
+        } else (pass == 80 && score<80){
+            alert('불합격 입니다');
+        }
+         */
+
+   /*      const qna = prompt('시험점수는?','');
+        const ans = qna > 70; */
+
+        /* if(!ans){
+            document.write('70점 이하 불합격입니다');
+        } else{
+            alert('70점 초과 합격');
+        } */
+
+        //var ccel = confirm('고객님 결제 하시겠습니까?');
+/* 
+        if(ccel){
+            //alert('결제되었습니다');  이문구가 없다고 생각
+        }else{
+            alert('취소되었습니다');
+        }
+         */
+        /* if (!ccel){
+            alert('취소되었습니다') 
+        } //위보다 간단하게 작성 */
+
+        /* 
+        부정연산자인 경우 true는 실행하지 않고
+        false만 실행하고 싶을떄 사용,
+        */
+
+        const flo = '꽃';
+        const clr = 'reds';
+        const kinds = true // 장미
+
+        if (flo === '동물' && clr === 'blues' || kinds){
+            console.log('기념일 선물');
+        } else {
+            console.log('다음 기회에');
+        }
+         
+        // 1) 우선순위 : &&의 우선순위가 || 보다 우선한다
+        // if ((flo === '동물' && clr === 'blues') || kinds)
+        // && 먼저 읽고 그다음 || 과 비교 => fales || true > true
+        //if (flo === '동물' && (clr === 'blues' || kinds))
+        // ||먼저 읽고 &&과 비교 > false && true > false
+    </script>    
 </section>
 
 <section>
 	<h2>
-        학습주제
+        연산자 우선순위
     </h2>
     <textarea class="ht5">
-    학습내용정리
+        1) 연산자의 종류 정리
+
+        대입 연산자 (=) 
+        사칙 연산자 ( +, -, *, /, % )
+        비교 연산자 ( >, <, >=, <=, !=, ==, ===, !== )
+        논리 연산자 ( &&, ||, ! )
+        복합 대입 연산자 ( +=, -=, *=, /=, %= )
+        
+        증감 연산자 ( ++, -- )
+        -----------------------------------------------
+
+        2) 연산자의 우선순위
+
+        1. 단항(증감) 연산자 ( ++, --, ! )
+        2. 사칙 연산자
+        3. 비교 연산자
+        4. 논리 연산자
+        5. 복합 대입 연산자 
+
+        ex1) ++a * b <= c
+         // 1) a에 ++를 먼저 계산 => 단항(증감) 연산자 1순위
+         // 2) *b => 사칙 연산자 2순위
+         // 3) 곱한값 <= c => 비교 연산자 3순위
     </textarea>
 </section>
 

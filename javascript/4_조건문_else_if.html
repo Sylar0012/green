@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>4_조건문_else_if</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        조건문 else if
+    </h2>
+    <textarea class="ht5">
+        else if 조건문 : 조건식1, 조건식2 둘다 거짓일 경우 else 실행.   
+
+        if(조건식1){
+            실행문1;         //조건식 1 만족시 실행
+        }else if(조건식2){
+            실행문2;         //조건식 2 만족시 실행
+        }else{
+            실행문3;         //모든 조건식 불만족시 실행
+        }
+
+        - else if 구문은 계속 추가 할 수 있음.
+        - 각 조건식 중 만족하는 블럭이 있으면 실행후 if문 나가버림
+        - else 구문 생략 가능. (작성시 위의 조건 모두 false일 경우 실행됨)
+    </textarea>
+    <script>
+        const a=10, b=20;
+
+        if( a == b ) {
+            console.log('a와 b가 같다면 실행');
+        }else if( a > b ){
+            console.log('a가 b보다 크다면 실행');
+        }else {
+            console.log('실행1,2 둘다 불만족');
+        }
+
+        //년도
+
+        /*var year=prompt('아이맥은 몇년도에 출시 되었을까요?','힌트 : 90년대');
+        if(year > 1998){
+            document.write('년도를 조금 더 내리세요')
+        }else if(year < 1998){
+            document.write('년도를 조금 더 올리세요804')
+        }else if(year == 1998){
+            document.write('정답입니다')
+        }*/
+
+        // 교통수단
+        var trans = prompt('오늘 이용한 대중교통은?','버스 또는 택시');
+        var price;
+        if(trans == '버스'){
+            price = 1500;
+        }else if(trans == '택시'){
+            price = 2500;
+        }
+        document.write(price + '원 입니다.');
+
+    </script>
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+
