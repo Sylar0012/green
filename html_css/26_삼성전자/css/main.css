@@ -53,6 +53,7 @@ ul, li 둘다 화면 중앙으로 보내는 justify-content: center; 가 안되�
 /* 
 글자 중앙정렬시 ul 보다 li로 많이 씀
 height, line-height < 글자 상하 중앙 
+flex: 0 0 150px; < 글자 좌우 벌리기
 */
 #header .gnb ul li a{
     font-size: 20px;
@@ -111,6 +112,8 @@ margin:0 auto;
     font-size:45px;
     line-height: 51px;
 }
-#main_visual .inner .mv_txt .tit{}
+#main_visual .inner .mv_txt .tit{
+    
+}
 #main_visual .inner .mv_txt .more{}
 
