@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 테스트</title>
+</head>
+<body>
+
+</body>
+<script>
+    console.log("홍길동 안녕");
+    alert("알림을 확인하세요");
+    window.confirm("취소하시겠습니까?");
+    document.write("웹화면에서 확인됩니다." + "<br>");
+    prompt("당신의 이름은?","");
+
+    document.write("3 + 5 = " + Number(3+5) + "<br>");
+    document.write("10 - 7  = " + Number(10-7) + "<br>");
+    document.write("7 x 3  = " + Number(7*3) + "<br>");
+    document.write("20 / 4  = " + Number(20/4) + "<br>");
+    document.write("100 / 3  = " + Number(100/3) + "<br>");
+    document.write("50 % 7  = " + Number(50%7) + "<br>");
+
+    let x =10, y=20;
+    console.log(x+y, x/y, x%y );
+    alert(x-y);
+    window.confirm(x*y); 
+
+    let t1='나의 폰은 ', t2="최신폰 입니다.";
+    let t = t1+t2
+    document.write(t + '<br>') ;
+
+    let singer='좋아하는 가수는?', song="";
+    song = prompt(singer,);
+
+    ls=singer +"<strong>"+ song+"</strong>"
+    document.write(ls+" 입니다."+"<br>"); 
+     
+    let num1 = prompt('숫자를 입력하세요','');
+    let num2 = prompt('숫자를 입력하세요','');
+    sum = Number(num1) +Number (num2);
+    document.write("sum의 값은? " + sum + " 입니다." +"<br>")
+
+    console.log(10<20);    
+    console.log(10<=20);    
+    console.log(10>20);    
+    console.log(10>=20);    
+    console.log(10==20);    
+    console.log(10!=20);    
+    console.log(70==='70');    
+    console.log(70!=='70'); 
+    
+    let n1 = 7;
+    let n2 = 30;
+    let k1 = '대한민국';
+    let k2 = '우리나라';
+        
+    document.write((n1<=n2) + "<br>");
+    document.write((n1!=n2) + "<br>");
+    document.write((k1>k2) + "<br>");
+    document.write((n2!=k2) + "<br>");
+    document.write((n1>k1) + "<br>");
+
+    let txt1=10, txt2=20, txt3='10cm', txt4='환영합니다';
+    console.log(typeof txt1); 
+    console.log(typeof txt2); 
+    console.log(typeof txt3); 
+    console.log(typeof txt4); 
+
+    let str='';
+    str += "봄바람 " + "휘날리며 " + "흩날리는 벚꽃잎이";
+    document.write(str+"<br>");
+
+    let jun = 18;
+    if(jun <= 18){
+        console.log('당신은 미성년자 입니다.');
+    }
+
+    let young=20, old=35;
+    if(young>=old){
+        console.log("young은 old보다 크거나 같습니다.");
+    }
+
+    number = prompt('숫자를 입력하세요',''); 
+    if (number%2 == 1){
+        document.write("<p>" + "홀수를 입력하였습니다." +"</p>");
+    }else if(number%2 == 0){
+        document.write("<p>" + "짝수를 입력하였습니다." +"</p>");    
+    }else{
+        alert("숫자만 입력 하세요");
+    }
+
+    walk = prompt('만보기 오늘 걸음수?',''); 
+    if (walk >= 10000){
+        document.write("<p>" + "목표달성! 만보성공!" +"</p>");
+    }else if(walk < 10000){
+        document.write("<p>" + "미션 실패!" +"</p>");    
+    }else{
+        alert("숫자만 입력 하세요");
+    }
+
+    test = prompt('오늘 자바스크릅트 테스트 예상점수는?','100점만점'); 
+    if (test>=50 && test<=100){
+        document.write("<p>" + "자바스크립트 기초 마스터!" +"</p>");
+    }else if(test<=50 && test<=100){
+        document.write("<p>" + "시작이반! 화이팅!" +"</p>");    
+    }else if(test > 100){
+        alert('100점이 최대점수 입니다.')
+    }
+    else{
+        alert("숫자만 입력 하세요");
+    }
+</script>
+</html>

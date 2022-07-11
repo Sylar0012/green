@@ -44,20 +44,70 @@
         if(year > 1998){
             document.write('년도를 조금 더 내리세요')
         }else if(year < 1998){
-            document.write('년도를 조금 더 올리세요804')
+            document.write('년도를 조금 더 올리세요')
         }else if(year == 1998){
             document.write('정답입니다')
         }*/
 
         // 교통수단
-        var trans = prompt('오늘 이용한 대중교통은?','버스 또는 택시');
+        /* var trans = prompt('오늘 이용한 대중교통은?','버스 또는 택시');
         var price;
         if(trans == '버스'){
             price = 1500;
         }else if(trans == '택시'){
             price = 2500;
         }
-        document.write(price + '원 입니다.');
+        document.write(price + '원 입니다.'); */
+
+        /* var member=prompt('직함을 입력하세요','사원 팀장');
+        var noti;
+        if(member == '사원'){
+            noti='사원님 반갑습니다';
+        }else if(member == '팀장'){
+            noti='팀장님 어서오세요.';
+        }else if(nember == ''){
+            noti='직함을 알려주세요.';
+        }else{
+            noti='';
+        }
+        alert(noti); */
+        /* var color=prompt('원하는 색상을 입력해주세요' , ' 빨강, 노랑, 파랑 ');
+        if(color == '빨강'){
+            document.write('<p style="background:#f00"> 빨강</p>');
+        }else if(color == '노랑'){
+            document.write('<p style="background:#fc0"> 노랑</p>');
+        }else if(color == '파랑'){
+            document.write('<p style="background:#00f"> 파랑</p>');
+        }else{
+            document.write('세가지 색중 하나를 골라주세요')
+        } */
+
+        /* var min = prompt('주민번호 뒷자리 첫 숫자를 입력해주세요','1~4사이 입력');
+        if( min==1 || min==3 ){ // 홀수
+            document.write('당신은 남성 입니다.');
+        }else if( min==2 || min==4){
+            document.write('당신은 여성 입니다.');
+        }else {
+            alert('범위 내의 숫자만 입력하세요');
+        } */
+
+        //var pass=90;
+        var pass=prompt('귀하의 점수는?','0~100점 입력');
+        var point='';
+        if(pass > 100){
+            document.write('0~100사이 점수만 입력하세요');
+        }else if(pass>=90){
+            point='채용합격자 입니다!';
+        }else if(pass>=80){
+            point='1차 면접합격자 입니다!';
+        }else if(pass>=70){
+            point='2차 면접합격자 입니다!';
+        }else if(pass>=60){
+            point='재시험 대상자 입니다!';
+        }else{
+            point='지원해주셔서 감사합니다.';
+        }
+        document.write('<strong>귀하는 </strong>' + point);
 
     </script>
 </section>

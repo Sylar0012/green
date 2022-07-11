@@ -18,6 +18,7 @@
                     <li>
                         <label for="uname">고객이름</label>
                         <input type="text" id="uname" placeholder="고객명 작성" required>
+                        <!-- required 필수입력 요소에 넣어야함(미입력시 진행x) -->
                     </li>
                     <li>
                         <label for="tel1">연락처</label>
@@ -25,8 +26,99 @@
                     </li>
                     <li>
                         <label for="email">이메일</label>
-                        <input type="email" id="email" placeholder="이메일 입력">
+                        <input type="email" id="email" placeholder="이메일 입력" maxlength="12" >
                         <span>@naver.com</span>
+                        <!-- placehoder > 입력칸안 텍스트  maxlength > 최대 입력글수-->
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>주문자 배송지</legend><!-- 이름 -->
+                <ul>
+                    <li>
+                        <label for="addr">주소지</label>
+                        <input type="text" id="addr" size="40" required>
+                        <!-- size > 글자의 갯수를 제한 -->
+                    </li>
+                    <li>
+                        <label for="tel2">연락처</label>
+                        <select>
+                            <option>SKT</option>
+                            <option>KT</option>
+                            <option>LG</option>
+                            <!-- 선택지 -->
+                        </select>
+                        <input type="tel" id="tel2">
+                    </li>
+                    <li>
+                        <div>
+                            <label for="in_addr">배송지작성</label>
+                            <input type="radio" id="home" name="order"><label for="home">집</label>
+                            <input type="radio" id="office" name="order"><label for="office">회사</label>
+                            <!-- name으로 묶어서 하나만 선택하게 하기 id는 label 과 input 연결 -->
+                        </div>
+                        <div>
+                            <textarea cols="40" rows="2" id="in_addr">
+                                            상세주소까지 작성하세요.
+                            </textarea>
+                            <!-- 위의 배송지 작성과 연결해야 함. -->
+                        </div>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <label>주문날짜</label>
+                        <input type="date">
+                    </li>
+                    <li>
+                        <h3>최근 한달간 주문조회</h3>
+                        <div>
+                            <label>한달간 날짜조회</label>
+                            <input type="date" min="2022-06-11" max="2022-07-10">
+                            <!-- date(달력) 에 min과 max를 주면 그 전날,이후날 선택 x -->
+                            <br>
+                            <input type="month"><!-- 월만 선택가능 -->
+                            <input type="week"><!-- n번째 주로 표현 가능 -->
+                            <input type="time"><!-- 시간 선택가능 -->
+                            <input type="datetime-local"> <!-- 연 월 일 , 시간대까지 다 보여줌 (예약때 주로 사용)-->
+                        </div>
+                    </li>
+                    <li>
+                        <label>영수증 첨부</label>
+                        <input type="file"><!-- 파일을 서버에 전송하게 해줌 -->
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>상품 정보</legend>
+                <ul>
+                    <li>
+                        <label for="pd_name">상품명검색</label>
+                        <input type="search" id="pd_name">
+                        <input type="submit" value="검색">
+                    </li>
+                    <li>
+                        <label>상품수량</label>
+                        <input type="number" min="1" max="100">
+                        <!-- number 타입은 음수도 적용 가능하기 때문에 min으로 최저 , max로 최대치 정해야함 -->
+                    </li>
+                    <li>
+                        <label>상품 색상</label>
+                        <input type="color" value="#ff0000">
+                        <!-- color 타입은 value로 초기 색상 지정 가능 -->
+                    </li>
+                    <li>
+                        <label>상품 결제 웹사이트</label>
+                        <input type="url" >
+                        <!-- url로 결제사이트 지정 가능. -->
+                    </li>
+                    <li>
+                        <label>배송진행</label>
+                        <progress value="50" max="100"></progress>
+                        <!-- 진행율을 보여주는 바 생성. value는 실제값 max는 최대치 -->
                     </li>
                 </ul>
             </fieldset>

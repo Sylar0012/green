@@ -73,13 +73,16 @@
 }
 #main_visual .inner .mv_txt .more{
     border:1px solid #19f;
-    color:#fff;
     font-size: 16px;
     text-align: center;
     width: 150px;
     padding: 3px 0;
     background-color: #19f;
     margin-bottom: 30px;
+}
+#main_visual .inner .mv_txt .more a{
+    display: block;
+    color:#fff;
 }
 #main_visual .inner .btn_prev{
     border: 2px solid blue;
@@ -93,7 +96,8 @@
 }
 #main_visual .inner .btn_prev a{
     order: 1;
-    color: blue
+    color: blue;
+    display: block;
 }
 #main_visual .inner .btn_next {
    order: 3;
@@ -108,6 +112,7 @@
 }
 #main_visual .inner .btn_next a{
     color : blue;
+    display: block;
 }
 
 /* #container_start------------- */
@@ -124,11 +129,12 @@
 #container .item_list{
     display: flex; 
     justify-content: center;  
+    flex: auto;
 }
 
 #container .item_list .event{
     border:1px solid #333;
-    margin: 0 50px 100px 0;
+    margin: 0 25px 100px;
 }
 #container .item_list .event:last-child{
     margin-right: 0;
@@ -147,6 +153,7 @@
     text-align: center;
     line-height: 30px;
     padding:20px 0;
+
 }
 #container .item_list .event .item_txt .item_coment{
     text-align: center;
@@ -170,7 +177,7 @@
     justify-content: center; 
 }
 #container .main_service .service_list .service{
-    margin-right: 20px;
+    margin: 0 10px;
 }
 #container .main_service .service_list .service:last-child{
     margin-right: 0;

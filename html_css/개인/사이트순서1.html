@@ -42,7 +42,7 @@ h1제목 안 a태그
     </ul>
 </nav><!-- navigation grobal navigation bar -->
 
-매뉴구성은 nav태그 안 ul li태그 
+h2는 주요 매뉴구성에 사용. (웹표준성)매뉴구성은 nav태그 안 ul li태그 
 
 <div id="main_visual">
     <div class="inner">  
@@ -74,4 +74,71 @@ btn_~ > 버튼_이전 다음
     </a></p><!-- .more -->
 </div><!-- .mv_txt -->
 
+<div class="inner">
+    <div class="mv_txt">
+        <p class="tit">
+            <strong>Samsung Care+</strong><br>
+            걱정은 덜고 안심은 더하세요!
+        </p><!-- .tit -->
+        <p class="more"><a href="#">
+                자세히보기
+            </a></p><!-- .more -->
+    </div><!-- .mv_txt -->
+    <p class="btn_prev"><a href="#">
+        이전
+    </a></p><!-- .btn_prev -->
+    <p class="btn_next"><a href="#">
+        다음
+    </a></p><!-- .btn_next -->
+</div><!-- .inner -->
 
+prev next 버튼 좌우 배치시 .inner에 포지션 먹여서 기준으로 만듦
+
+
+<div id="container">
+    <section class="cont01"></section>
+    <section class="cont02"></section>
+</div><!-- #container -->
+
+section으로 나눔.
+
+<div class="product">
+    <article><a href="#">
+        <div class="photo"></div><!-- .photo -->
+        <dl>
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </a></article>
+</div><!-- .product -->
+
+ul li 태그 사용해도 되나 다른 방식으로 사용. (주로 사용하는 방식인듯)
+
+<div class="photo">
+    <img src='https://via.placeholder.com/580x400'>
+</div><!-- .photo -->
+
+https://via.placeholder.com/580x400 
+    ㄴ 더미사진으로 영역 표시. 가로x세로
+
+<article><a href="#">
+    <div class="photo">
+        <img src='https://via.placeholder.com/580x400'>
+    </div><!-- .photo -->
+    <dl>
+        <dt>제품명1</dt>
+        <dd>제품 상세설명 입니다.</dd>
+    </dl>
+</a></article>
+<article><a href="#">
+    <div class="photo">
+        <img src='https://via.placeholder.com/580x400'>
+    </div><!-- .photo -->
+    <dl>
+        <dt>제품명2</dt>
+        <dd>제품 상세설명 입니다.</dd>
+    </dl>
+</a></article>
+와 같이 목록 작성
+
+    

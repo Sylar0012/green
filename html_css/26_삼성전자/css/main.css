@@ -93,6 +93,7 @@ width 는 100% height는 설정값
     height: 700px;
     background:#cce;
     margin: 0 auto;
+    position: relative;
 }
 /* 
 margin: 0 auto; > 가운데 정렬(공식)
@@ -111,9 +112,106 @@ margin:0 auto;
 #main_visual .inner .mv_txt{
     font-size:45px;
     line-height: 51px;
-}
+    padding-top: 220px ;
+    margin-left: 150px;
+    /* 
+    웹사이트의 특징상 큰영역구조에 첫번째 자식태그의 top 또는 bottom으로 여백을 지정할 경우
+    부모태그 전체로 여백이 지정되는 경우 발생. => margin대신 padding및 다른속성으로 대체사용.
+    */
+    
+}   
 #main_visual .inner .mv_txt .tit{
     
 }
-#main_visual .inner .mv_txt .more{}
+#main_visual .inner .mv_txt .more{
+    width: 150px;
+    height: 40px;
+    background: #19f;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+#main_visual .inner .mv_txt .more a{
+    display: block;
+    color:#fff;
+}
+/*  display: block; < a태그에 공간값을 줘야함. 안주면 텍스트에만 반응
+    a태그는 inline요소로 공간을 가질 수 없음. 글자에만 a링크가 적용되면 ux측면에서 부적합
+    파랑버튼 전체를 a링크 대상으로 인식시켜야 하므로 block요소로 처리
+*/
+
+#main_visual .inner .btn_prev, #main_visual .inner .btn_next{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border:2px solid #00f;
+    text-align: center;
+    line-height: 50px;
+    position: absolute; top:50%; margin-top: -27px; left: 50%;
+}
+/* 
+text-align 으로 텍스트 가로중앙 line-height를 높이와 같은값 입력해서 세로중앙
+== 태그 가로에서 가운데 배치하는 3가지 공식 ==
+1. 인라인 요소 : {text-align:center}
+2. 블록요소(기본) : {width:값; margin:0 auto;}
+3. 블록요소 : 블록요소 태그가 position속성을 가질때 margin:0 auto; 속성값을 함께 사용할 수 없음 => 적용자체 불가
+{position: absolute; left: 50%; margin-left:-현태그 가로너비의 반값; top 또는 bottom:값;}
+** 부모태그 공간값이 정확하지 않고, 100% 비율로 기준을 잡고 있을 경우에는 px 고정단위를 적용 할 수 없으므로 %로 위치값을 지정해야함.  
+*/
+#main_visual .inner .btn_prev{
+    margin-left: -600px ;
+}
+#main_visual .inner .btn_next{
+    margin-left: 546px ;
+    /* 오른쪽 버튼은 btn_next 의 width 값 빼줌*/
+}
+/* 
+position: absolute; top:50%; margin-top: -27px; left: 50%;  
+으로 중앙정렬 했으니 margin으로 좌우 설정.
+*/
+
+#main_visual .inner .btn_prev a, #main_visual .inner .btn_next a{
+    color: #00f;
+    display: block;
+}
+#main_visual .inner .btn_prev:hover, #main_visual .inner .btn_next:hover{
+    background: #00f;
+}
+#main_visual .inner .btn_prev:hover a , #main_visual .inner .btn_next:hover a{
+    color: #fff; 
+}
+/* a태그에 둘다 직접넣기보단 p태그에 백그라운드, a 태그에 텍스트 컬러 입히는게 좋음 */
+
+/* 코드 중복시 위와 같이 적으면 둘다 적용 */
+
+/* #container_start---------------- */
+#container{}
+
+/* 공통 style */
+#container .cont_tit{
+    font-size:40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cont01{
+    background: #8df;
+    padding: 100px 0;
+}
+/* 위 아래 동일하니 큰 틀에 padding으로 적용. 내부마다 주면 꼬임 */
+.cont01 .inner{
+    width: 1200px;
+    background: #cea;
+    margin: 0 auto;
+}
+/* 
+product 부모태그. 공간값을 먼저 잡아주기 위해 먼저적음
+웹 통일성 위해 header쪽 inner와 동일값 적용.
+
+*/
+.cont01 .product{
+
+}
 
