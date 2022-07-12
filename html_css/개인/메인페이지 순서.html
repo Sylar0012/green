@@ -141,4 +141,84 @@ https://via.placeholder.com/580x400
 </a></article>
 와 같이 목록 작성
 
-    
+<section class="cont02">
+    <div class="inner">
+        <h3 class="cont_tit" >주요 서비스 안내</h3><!-- .cont_tit -->
+    </div><!-- .inner -->
+</section><!-- .cont02 -->
+
+주요서비스 안내는 베스트제품 이라는 타이틀과 같은 설정이라 클래스명 같음.
+
+<h3 class="cont_tit" >주요 서비스 안내</h3><!-- .cont_tit -->
+<div class="service">
+    <article><a href="#">
+        <div class="photo">285x300</div><!-- .photo -->
+        <dl>
+            <dt>챗봇상담</dt>
+            <dd>챗봇상담 상세설명</dd>
+        </dl>
+    </a></article>
+
+article을 사용해서 묶어줌
+
+<div id="footer">
+    <div id="footer_inner">
+        <div class="flogo"><a href="#">
+            삼성전자
+        </a></div><!-- .flogo -->
+        <div class="footer_info"></div><!-- .footer_info -->
+        <div class="family"></div><!-- .family -->
+    </div><!-- #footer_inner -->
+</div><!-- #footer -->       
+
+footer 구조
+
+<div class="footer_info">
+    <div class="fmenu"></div><!-- .fmenu -->
+    <address class="finfo"></address><!-- .finfo -->    
+    <div class="copy"></div><!-- .copy -->
+</div><!-- .footer_info -->
+
+footer_info 세부구조
+
+<div class="fmenu">
+    <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+        <li><a href="#">사이트맵</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">아용가이드</a></li>
+    </ul>
+</div><!-- .fmenu -->
+
+일자로 배치시 ul li
+
+<address class="finfo">
+    <p>
+        <span>주소: 경기도 수원시 영통구 삼성로 290 삼성전자서비스주식회사</span>
+        <span>대표이사 : 송봉섭</span>
+    </p>
+    <p>
+        <span>사업자등록번호 : 124-81-58485</span>
+        <span>대표전화 : 1588-3366(통화요금 : 발신자 부담)</span>
+    </p>
+</address><!-- .finfo -->    
+
+웹 표준성 때문에 나눠서 작성. address태그 사용시 글꼴 기울임 적용됨.
+reset.css 에서 address{font-style:normal;}로 처리해줘야 함
+
+<div class="copy">
+    <span>Copyright &copy; SAMSUNG ELECTRONICS SERVUCE CO., Ltd. All rights reserved.</span>
+</div><!-- .copy -->
+
+ⓒ = &copy;
+
+<div class="family"><a href="#">
+    Family Site
+</a></div><!-- .family -->
+
+마지막 부분
+
+
+header 와 footer는 높이지정을 해주는게 좋음
+사이트 내부의 다른곳으로 이동해도 header와 footer는 바뀌지 않기 떄문.

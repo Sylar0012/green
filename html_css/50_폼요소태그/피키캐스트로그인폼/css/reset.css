@@ -6,8 +6,8 @@
     padding: 0;
 }
 body{
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 18px;
     font-family: 'Noto Sans KR', sans-serif;
     /* @import url~ 를 쓰겠다 */
 }

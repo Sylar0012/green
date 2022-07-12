@@ -17,7 +17,7 @@
                 <ul>
                     <li>
                         <label for="uname">고객이름</label>
-                        <input type="text" id="uname" placeholder="고객명 작성" required>
+                        <input type="text" id="uname" placeholder="고객명 작성" required autofocus>
                         <!-- required 필수입력 요소에 넣어야함(미입력시 진행x) -->
                     </li>
                     <li>
@@ -124,5 +124,28 @@
             </fieldset>
         </form>
     </div><!-- #wrap -->
+<!--
+== 공통 입력양식 속성 ==
+1) placeholder=""; : 기본대체 텍스트 제공  
+    >text, password, search... 등에 사용
+
+2) required : 필수 입력 속성.
+    > <input type="text" required> : 반드시 데이터가 입력되어야 하는 폼으로 지정.
+
+3) readonly : 읽기 전용 속성. (입력불가, 읽기만 가능) required처럼 혼자 사용
+
+4) disabled : 비활성화 속성. 
+    > <input type="text" disabled> : 텍스트 입력이 비활성화됨.
+
+5) autocomplete : 자동완성기능 (on/off값 사용가능)
+    > <input type="email" autocomplete="on"> : 이전 데이터 기준으로 입력중인 글자를 자동완성기능 적용.
+    > 글자, 검색어, url, email, 비밀번호 입력시 주로 사용.
+
+6) autofocus : 자동 포커스 기능 > 현재 웹페이지 로딩시 첫 입력할 폼 요소 선택속성.
+    > <input type="text" name="name" autofocus>
+    > 이름 입력 상자 선택해줌
+-->
+
 </body>
+
 </html>

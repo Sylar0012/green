@@ -5,38 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>과제</title>
-    <meta charset="description" content="알라딘 서비스를 제공하는 웹사이트">
+    <meta charset="description" content="책 구매 서비스를 제공하는 웹사이트">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
     <div id="wrap">
         <header id="header">
-            <h1 class="logo"><a href="#">로고</a></h1><!-- .logo -->
-            <ul class="logo_menu">
-                <li><a href="#">회원가입</a></li>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">e-북</a></li>
-                <li><a href="#">장바구니</a></li>
-            </ul><!-- .logo_menu -->
-            <div class="inner">
-                <nav class="gnb">   
+            <div class="header_area">
+                <div class="header_logo">
+                    <h1 class="logo"><a href="#">로고</a></h1><!-- .logo -->
+                    <div class="service_area">
                     <ul>
-                        <li><a href="#">책홈</a></li>
-                        <li class="active"><a href="#">베스트셀러</a></li>
-                        <li><a href="#">고객센터</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">내서재</a></li>
-                    </ul>
-                </nav><!-- gnb -->
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">e-북</a></li>
+                        <li><a href="#">장바구니</a></li>
+                    </ul><!-- .logo_menu -->
+                    </div><!-- service_area --> 
+                </div><!-- .header_logo -->
+            </div><!-- .header_area -->               
+            <nav class="gnb">
+                <h2>메인매뉴</h2>   
+                <ul>
+                    <li class="active"><a href="#">메인화면</a></li>
+                    <li><a href="#">베스트셀러</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">내서재</a></li>
+                </ul>
+            </nav><!-- gnb -->
         </header><!-- #header -->
         <div id="main_visual">
             <div class="search">
-                <input type='search' id="search_br" class="search_br" value="찾으시는 책을 입력 해주세요">
-                <label for="search_br"><img src=""></label>
+                <input type='search' id="search_br" class="search_br" placeholder=" 찾으시는 책을 입력 해주세요" >
+                <label for="search_br"></label>
+             </div><!-- .search -->
+             <div class="inner">
                 
-            </div><!-- .search -->
-            </div><!-- .inner -->
+             </div><!-- .inner -->
+          
         </div><!-- #main_visual-->
         <div id="container"></div><!-- #container -->
         <div id="footer"></div><!-- #footer -->       
