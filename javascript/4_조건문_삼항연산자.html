@@ -18,7 +18,42 @@
         - if문이 길어질 경우 한줄로 간략히 표기할 수 있음.
         - 비교연산자, 논리연산자 : true, false 반환되는 형태로 표현시 적합.
         
+        조건식 ? 연산식1 : 연산식2
+                        true    false
+        2항 : age > 10
+        3항 : age > 20 ? 10 : 5 //  const result=(30>20) ? '참' : '거짓';
     </textarea>
+    <script>
+        let ob =30;
+        let yb =20;
+       /*  if(ob>yb){
+            console.log('참');
+        }else{
+            console.log('거짓');
+        } */
+        const result=(ob>yb) ? '참' : '거짓';
+        console.log(result);
+        
+        var car = 500;
+        var bike = 100;
+        var ride = car > bike ? '자동차가 비싸요' : '자전거가 저렴해요';
+        console.log(ride);
+
+        var hot = 3;
+        var cold = -3;
+
+        var wh1=hot>cold ? '영상' : '영하';
+        var wh2=hot<cold ? '영상' : '영하';
+        console.log(wh2);
+
+        var inw = prompt('현재 온도는?','');
+        var otw = Number(inw); 
+        // prompt로 받으면 문자형으로 인식하기 때문에 숫자 비교시 Number사용
+
+        var msg=otw > 0 ? '현재온도 영상' : '현재온도 영하';
+        console.log(msg)
+
+    </script>
 </section>
 
 <section>
