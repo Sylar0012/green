@@ -3,7 +3,7 @@
 #wrap{}
 /* header start------------- */
 #header{
-    background: #fffffa;
+    background: #fffffd;
 }
 #header .header_area{
     display: flex;
@@ -14,11 +14,12 @@
     display: flex;
     justify-content:space-between;
 }
+#header .header_area .header_logo h1{
+    display: none;
+}
 #header .header_area .header_logo .logo{
     display: block;
-    height: 70px;
-    line-height: 70px;
-    padding-left: 60px;   
+    justify-content: space-between;
 }
 #header .header_area .service_area{
     font-size: 0;
@@ -45,6 +46,7 @@
     border-right:none;
 }
 #header .gnb{
+    width: 100%;
     text-align: center;
 }
 #header .gnb h2{
@@ -58,9 +60,7 @@
     justify-content: center;
 }
 #header .gnb ul li{
-    flex:0 0 150px;
-
-    
+    flex:0 0 200px;    
 }
 /* .gub hover-------------------- */
 #header .gnb ul li:hover a{
@@ -72,31 +72,202 @@
 /* main_visual start--------------- */
 
 /* 공통 태그 */
-#main_visual .search .search_br, #main_visual .search label {
-    margin: 30px 0;
+#main_visual .search .search_br, #main_visual .search label,#main_visual .search .dep_search {
+    margin-top: 30px;
     height: 40px;
 }
 /* ----------- */
 
 #main_visual{
     width: 100%;
+    background: #fffffa;
 }
 #main_visual .search{
     border-top:1px solid #333;
     display: flex;
     justify-content: center;
-
 }
 #main_visual .search .search_br{
-    width: 700px;
-    border-radius: 5px;
-    border: 1px solid #333;
+    width: 745px;
+    border:none;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    background: #fffffa;
 }
 #main_visual .search .search_br:hover{
-    border:2px solid #1af;
-    border-radius: 5px;
+    border:none;
+    border-bottom: 2px solid #1af;
 }
 #main_visual .search label {
-    background: url(../img/but.png) no-repeat ;
+    background: url(../img/search.png) no-repeat ;
     width: 40px;
+    height: 40px;
+    font-size: 0;
+    padding:0 10px;
+    
+}
+#main_visual .search .dep_search p{
+    width: 60px;
+    line-height: 40px;
+    border: 1px solid #1af;
+    border-radius: 7px;
+    padding: 0 5px;
+}
+/* hover area--------------------- */
+
+#main_visual .search .dep_search p:hover{
+    background: #1af;
+    
+}
+#main_visual .search .dep_search:hover a{
+    color: #fff;
+}
+
+/* .inner start----------------------- */
+#main_visual .inner{
+    width: 1005px;
+    margin: 0 auto;
+    position: relative;
+}
+#main_visual .inner .inner_title{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 40px;
+}
+/* .inner .lst_hotbook start---------------- */
+#main_visual .inner .lst_hotbook{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst a{
+    display: block;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst:hover a{
+    color: #1af;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh{
+    font-size: 0;
+}
+
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh .photo{
+    position: relative;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh .photo img{
+    width: 140px;
+    height: 200px;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh .photo .book_mask{
+    width: 173px;
+    height: 214px;
+    display: block;
+    background: url(../img/hbook_cover.png) no-repeat 0;
+    z-index: 300;
+    position: absolute;
+    top:0;
+    left: -16px;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul{
+    text-align: center;
+
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul .book_info{
+    font-size: 18px;
+    line-height: 50px;
+    border: none;
+    display: block;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul li{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    border-right: 1px solid #333;
+    padding: 0 5px;
+}
+#main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul li:last-child{
+    border: none;
+}
+.pagination ul {
+    display: flex;
+    justify-content: center;
+}
+#main_visual .inner .pagination ul li{
+    width: 10px;
+    height: 10px;
+    background: #bcc;
+    border-radius: 10px;
+    text-indent: -9999px;
+    margin: 0 5px;
+}
+#main_visual .inner .pagination ul .active{
+    background: #1af;
+}
+#main_visual .inner .pagination ul li a{
+    display: block;
+}
+/* .pagination ul li hover------------- */
+#main_visual .inner .pagination ul li:hover a{
+    background: #1af;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+/* 버튼 공통 css---------- */
+#main_visual .inner .btn_prev, #main_visual .inner .btn_next{
+    position: absolute; top:50%; margin-top: -27px; left: 50%;
+    font-size: 0;
+    background: url(../img/bg.png) no-repeat 0px -60px;
+    filter: opacity(0.5) drop-shadow(0 0 0 #222);
+    width: 50px;
+    height: 50px;
+}
+#main_visual .inner .btn_prev a, #main_visual .inner .btn_next a{
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+#main_visual .inner .btn_prev{
+    margin-left: -600px ;
+    transform:scale(-1) ;
+}
+#main_visual .inner .btn_next{
+    margin-left: 550px ;
+}
+/* btb hover----------------- */
+#main_visual .inner .btn_prev:hover, #main_visual .inner .btn_next:hover{
+    filter: opacity(0.5) drop-shadow(0 0 0 #00f);
+}
+/* #container start------------------- */
+#container{
+    width: 100%;
+}
+#container .cont_title{
+    display: flex;
+    justify-content: center;
+    line-height: 90px;
+    border-bottom: 1px solid #333 ;
+}
+#container .cont_gnb{}
+#container .cont_gnb h3{
+    display: none;
+}
+#container .cont_gnb ul{
+    display: flex;
+    border-top: 1px solid #aaa;
+    font-size: 16px;
+    line-height: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+}
+#container .cont_gnb ul li{
+    flex:0 0 150px; 
+}
+#container .cont_gnb ul .active a{
+    color: #1af;
+}
+#container .cont_gnb ul li:hover a{
+    color: #1af;
 }

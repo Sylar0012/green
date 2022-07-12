@@ -14,7 +14,10 @@
         <header id="header">
             <div class="header_area">
                 <div class="header_logo">
-                    <h1 class="logo"><a href="#">로고</a></h1><!-- .logo -->
+                    <h1>로고</h1>
+                    <div class="logo"><a href="#">
+                        <img src="img/logo.png" alt="오늘의책">
+                    </a></div><!-- .logo -->
                     <div class="service_area">
                     <ul>
                         <li><a href="#">회원가입</a></li>
@@ -39,14 +42,104 @@
         <div id="main_visual">
             <div class="search">
                 <input type='search' id="search_br" class="search_br" placeholder=" 찾으시는 책을 입력 해주세요" >
-                <label for="search_br"></label>
-             </div><!-- .search -->
-             <div class="inner">
-                
-             </div><!-- .inner -->
-          
+                <label for="search_br">검색</label>
+                <div class="dep_search">
+                    <p><a href="#">상세검색</a></p>
+                </div><!-- .dep_search -->
+            </div><!-- .search -->
+            <div class="inner">
+                <h3 class="inner_title">금주의 추천 도서</h3><!-- .inner_title -->
+                <div class="lst_hotbook">
+                    <div class="inner_book_lst">
+                        <a href="#"><article>
+                            <div class="book_exh">
+                                <div class="photo">
+                                    <img src="img/hotbook/hotbook1.jpg" alt="노랜드">
+                                    <span class="book_mask"></span>
+                                </div><!-- .photo -->
+                                <ul>
+                                    <li class="book_info">노랜드</li>
+                                    <li>천선란</li>
+                                    <li>한겨레출판사</li>
+                                </ul>    
+                            </div><!-- .book_exh -->
+                        </artcle></a>
+                    </div><!-- inner_book_lst -->
+                    <div class="inner_book_lst">
+                        <article><a href="#">
+                            <div class="book_exh">
+                                <div class="photo">
+                                    <img src="img/hotbook/hotbook2.jpg" alt="우리는 서로의 그림책입니다">
+                                    <span class="book_mask"></span>
+                                </div><!-- .photo -->
+                                <ul>
+                                    <li class="book_info"li>우리는 서로의 ...</li>
+                                    <li>황진희</li>
+                                    <li>호호아</li>
+                                </ul>    
+                            </div><!-- .book_exh -->
+                        </a></artcle>
+                    </div><!-- inner_book_lst --><div class="inner_book_lst">
+                        <article><a href="#">
+                            <div class="book_exh">
+                                <div class="photo">
+                                    <img src="img/hotbook/hotbook3.jpg" alt="감정와해기법">
+                                    <span class="book_mask"></span>
+                                </div><!-- .photo -->
+                                <ul>
+                                    <li class="book_info">감정와해기법</li>
+                                    <li>현진</li>
+                                    <li>메이킹북스</li>
+                                </dl>    
+                            </div><!-- .book_exh -->
+                        </a></artcle>
+                    </div><!-- inner_book_lst --><div class="inner_book_lst">
+                        <article><a href="#">
+                            <div class="book_exh">
+                                <div class="photo">
+                                    <img src="img/hotbook/hotbook4.jpg" alt="봄에 나는 없었다">
+                                    <span class="book_mask"></span>
+                                </div><!-- .photo -->
+                                <ul>
+                                    <li class="book_info">봄에 나는 없었다</li>
+                                    <li>애거사 크리..</li>
+                                    <li>포레</li>
+                                </ul>    
+                            </div><!-- .book_exh -->
+                        </a></artcle>
+                    </div><!-- inner_book_lst -->    
+                </div><!-- .lst_hotbook -->
+                <p class="btn_prev"><a href="#">
+                    이전
+                </a></p><!-- .btn_prev -->
+                <p class="btn_next"><a href="#">
+                    다음
+                </a></p><!-- .btn_next -->
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div><!-- .pagination -->          
+            </div><!-- .inner -->
         </div><!-- #main_visual-->
-        <div id="container"></div><!-- #container -->
+        <div id="container">
+            <h3 class="cont_title">이번주 베스트 셀러</h3><!-- .cont_title -->
+            <div class="cont_gnb">
+                <h3>컨텐츠매뉴</h3>
+                <ul>
+                    <li class="active"><a href="#">종합</a></li>
+                    <li><a href="#">소설</a></li>
+                    <li><a href="#">시/에세이</a></li>
+                    <li><a href="#">비즈니스/경제</a></li>
+                    <li><a href="#">자기관리</a></li>
+                    <li><a href="#">역사/문화</a></li>
+                    <li><a href="#">가정/생활</a></li>
+                    <li><a href="#">어린이</a></li>
+                </ul>
+            </div><!-- .cont_gnb -->
+        </div><!-- #container -->
         <div id="footer"></div><!-- #footer -->       
     </div><!-- #wrap -->
 </body>
