@@ -61,6 +61,53 @@
         3) 비교하는 태그보다 큰 숫자값을 가진 태그가 항상 맨위로 배치됨. (큰숫자)
     
     */
+
+    #d2{
+        position:relative;
+        width: 100%;
+    }
+
+    #d2 .pp1{
+        border: 1px solid #444;
+        width: 198px;
+        height: 280px;
+        position: absolute;
+        top: 120px;
+        left: 120px;
+        z-index: 5100;
+        box-shadow: 10px 10px 10px #888 ;
+        
+        
+    }
+    #d2 .pp1 img{
+   
+        width: 198px;
+        height: 280px;
+       
+    }
+    #d2 .pp2{
+        background: #ddd;
+        border: 1px solid #999;
+        width: 180px;
+        height: 270px;
+        position: absolute;
+        top: 109px;
+        left: 126px;
+        box-shadow: 5px 5px 5px 5px #eee inset;
+    }
+    #d2 .pp3{
+    border-bottom: 10px solid #ddd;
+    border-left: 5px solid transparent;
+    border-right: 10px solid transparent;
+    height: 0;
+    width: 183px;
+    position: absolute;
+    top: 110px;
+    left: 120px;
+   
+    }
+
+
 </style>
 <body>
     <div id ="d1">
@@ -68,5 +115,12 @@
         <p class="p2">p2</p>
         <p class="p3">p3</p>
     </div>
+    <div id="d2"><a href="#">
+        <p class="pp1"><img src="img/22485918.jpg"></p>
+        <p class="pp2"></p>
+        <p class="pp3"></p>
+    </a></div>    
+
 </body>
+
 </html>
