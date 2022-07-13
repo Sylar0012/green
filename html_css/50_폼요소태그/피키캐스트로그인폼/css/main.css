@@ -1,6 +1,57 @@
 @charset "UTF-8";
-
+html, body{
+    height: 100%;
+    /* 
+    wrap에 백그라운드 이미지를 넣을때 화면 전체를 채우려면
+    html, body에 높이값을 100%로 설정해야함.
+    안넣으면 안의 컨텐츠 만큼만 배경으로 됨.
+    */
+}
 #wrap{
-    background: url(../img/bg_join4.jpg) no-repeat;
+    width: 100%;
+    height: 100vh;/* 디바이스 기준 100 */
+    /* height: 100%; 는 전체 100*/
+    background: url(../img/bg_join4.jpg) no-repeat center center;
+    /* center center : 가로중앙 세로중앙 */
+     background-size: cover; 
+    /* 
+    사진을 전체적으로 다 보여줌. 
+    주로쓰는 방식 (고해상도 모니터도 커버가능)
+     */
+    /* object-fit: cover; */
+}   
+/* 
+object-fit : img, video, object, svg등 비율이 유지되는 요소들에게 사용하는 속성
+object-fit : 
+cover : 비율이 유지되면서 영역안에 가득 채워질수 있도록함. (고해상도 모니터 커버 불가)
+contain : 비율 유지하면서 영역안에 요소가 가득 들어가도록 함
+none : 크기, 비율 상관없이 크기 가운데 배치
+fill : 요소 가득 채울 수 있도록 가로, 세로 강제 지정(비율x)
 
+*/
+
+.logo{
+    width: 212px;
+    height: 76px;
+    margin:0 auto 60px auto;
+    
+    padding-top: 148px;
+    /* #wrap의 첫째 자식에 margin-top을 넣으면 배경까지 같이밀림. */
+}
+.logo img{
+    width: 100%;
+    height: auto;
+    /* 
+    유지보수 차원에서 img에 직접 px입력은 삼가. 
+    사이즈는 부모 태그 또는 클래스에서 입력
+    */
+}
+.box{
+    width: 335px;
+    height: 400px;
+    background: rgba(255,255,255,0.7);
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding : 45px 45px 40px 45px;
 }

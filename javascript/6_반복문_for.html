@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6_반복문_for</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        3)for 문
+    </h2>
+    <textarea class="ht5">
+        3)for 문 : 3개의 수식에 따라 반복적으로 실행함.
+
+        for(초기식; 조건식; 증감식){  //증감식은 콜론x
+            실행문;
+        }
+        1) 초기식 : 반복 변수의 값을 초기화 (for문 시작시 한번만 실행)
+
+        2) 조건식 : 반복횟수 결정(true 동안 반복)
+
+        3) 증감식 : 초기식의 변수값을 증가 또는 감소 (false가 되면 멈춤)
+
+        * 변수 사용시 인덱스 index의 i, j, k영어 한단어를 주로 사용함.
+        * const는 값변경 불가 변수 (사용시 에러남)
+    </textarea>
+    <script>
+        for(var i=0; i<10; i++){
+            console.log(i);
+        }
+        for(var i=10; i==20; i++){
+            console.log(i);
+        } // 출력안됨
+        /* for (var a = 0; a<=3; a++){
+            alert(a);
+        } // 3까지 경고창 */
+        
+        /* var count=prompt('몇번 반복하나요?','');
+        count=Number(count);
+        
+        var msg='어서오세요 환영합니다.';
+        for(var i=1; i<=count; i++){
+            document.write(msg + '<br>');
+        } */
+
+        /* var nstart = prompt('시작!','숫자입력');
+        var nend = prompt('끝!','숫자입력');
+
+        nstart=Number(nstart);
+        nend=Number(nend);
+
+        for(var i=nstart; i<=nend; i++){
+            if(i % 2!=0){
+                document.write('숫자는?' + i + '<br>');
+            }
+        } */
+
+        for(var d=1; d<=30; d++){
+            if(d % 2 == 0 && d % 5 == 0){
+                console.log('2와 5의배수' + d);
+            }
+        }
+        for (var e=1; e<=30; e++){
+            if(e % 3 == 0){
+                document.write('<p style="color:#f00"> 3의배수 빨강' + e + '</p>')
+            }else if(e % 7 == 0){
+                document.write('<p style="background:#00f"> 7의배수 파랑' + e + '</p>')
+            }
+        } // 21은 3과 7의 공통 배수 이지만 if문이 먼저 적용되어 else if는 안먹힘
+
+    </script>
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+

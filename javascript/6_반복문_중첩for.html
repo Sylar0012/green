@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>6_반복문_중첩for</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/template.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+	<h2>
+        4)  for문 안의 for문
+    </h2>
+    <textarea class="ht5">
+        예를들어 표 (3줄 2칸)을 제작한다면,
+        1줄씩 작성 될때 마다 2칸씩 제작해야할 경우라고 한다면 중첩for문을 사용
+
+        - 큰 for문 1번 실행시 포함 for문은 2번실행.
+    </textarea>
+    <script>
+        /* var r=1;
+        for(r=1; r<=9; r++){
+            document.write('2 X '+r+' = ' + r * 2 + '<br>');
+        }*/
+ 
+        var g;
+        var d;
+        for(g=2; g<=9; g++){
+            document.write('<br><p>'+ g +'단 시작합니다!</p>');
+            for(d=1; d<=9; d++){
+                document.write('<p>' + g + ' X ' + d + ' = ' + (g*d) + '</p>');
+            }
+        }
+    </script>
+</section>
+
+<section>
+	<h2>
+        학습주제
+    </h2>
+    <textarea class="ht5">
+    학습내용정리
+    </textarea>
+</section>
+
+</body>
+</html>
+
+
+
+
+

@@ -19,7 +19,7 @@ img{
     border: none;
     vertical-align:top;
 }
-ul, ol{
+ul, ol, li{
     list-style:none;
 }
 .cf{

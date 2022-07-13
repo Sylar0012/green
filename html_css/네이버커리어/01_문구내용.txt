@@ -1,0 +1,126 @@
+네이버커리어 
+https://recruit.navercorp.com/
+_______________
+
+레이아웃 : 4단구조
+#wrap
+ㄴ#header
+ㄴ#main_video
+ㄴ#container
+ㄴ#footer
+_______________
+
+#header -------
+
+NAVER Careers
+
+Teams
+People
+Benefits
+Culture
+Value
+
+Jobs
+Login
+FAQ
+
+
+
+
+
+#main_video -------
+
+Board the NaverShip
+지원하기
+
+CODE YOUR CAREER
+2022년 네이버 기술 직군 신입 채용 Track_인턴십 (6.7~6.15) / Track_공채 (6.17~6.28)
+
+
+
+
+
+#container -------
+
+키워드
+
+법인
+NAVER
+NAVER Cloud
+WORKS MOBILE
+SNOW
+NAVER LABS
+NAVER WEBTOON
+NAVER FINANCIAL
+NAVER I&S
+
+직군
+Tech
+Design
+Service & Business
+Corporate
+
+검색
+
+===========
+
+Teams 서로 다른 사람들이 모여 한방향으로 나아갑니다.
+
+Tech
+다가오는 미래를 구현합니다.
+
+Design
+경험을 설계합니다.
+
+Service & Business
+일상을 풍요롭게 합니다.
+
+Corporate
+네이버의 추진력을 만듭니다.
+
+===========
+
+Benefits 네이버의 일하는 문하는 계속 진화합니다.
+
+Financial Wellbeing
+회사의 미래가치와 성과를 함께 나누고, 
+생활의 안정을 지원합니다.
+
+Time & Refresh
+저마다 몰입할 수 있는 환경이 다름을 알기에 
+시간과 공간 선택의 자율성을 가지며, 
+리프레시를 위한 충전의 기회도 마련합니다.
+
+WorkSpace
+공간이 우리에게 미치는 영향을 잘 알기에,
+우리가 일할 공간을 직접 설계합니다. 
+
+Work Tools
+최고의 퍼포먼스를 위해 
+최적의 장비를 지원합니다.
+
+
+
+
+#footer -------
+
+ⓒ NAVER Corp.
+
+개인정보 처리방침
+
+관련 사이트 
+
+NAVER Corp
+NAVER Cloud
+WORKS MOBILE
+SNOW
+NAVER LABS
+NAVER WEBTOON
+NAVER FINANCIAL
+NVAR I&S
+
+
+
+
+
+

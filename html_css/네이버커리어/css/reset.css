@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* @붙으면 맨위로 */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
+    /* @import url~ 를 쓰겠다 */
+}
+a{
+    color: #111;
+    text-decoration: none;
+}
+img{
+    border: none;
+    vertical-align:top;
+}
+ul, ol, li{
+    list-style:none;
+}
+.cf{
+
+}
+.cf::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/* html 에서 .cf만 추가하면 float사용시 ::after생략가능 */

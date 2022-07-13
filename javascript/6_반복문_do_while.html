@@ -42,15 +42,37 @@
             sum += x;   //sum(0) +1 +2 +3 +4 +5 ~ +10
             x++;
         }while(x<=10);
-        document.write('합계는? '+sum); //출력 55
+        document.write('합계는? '+sum +'<br>'); //출력 55
 
         var attack = 10;
         var depend = 1;
         
         do{
-            document.write('게임 시작!');
+            document.write('게임 시작!<br>');
             attack++;
         }while(attack==depend);
+
+        var age = 30;
+        do{
+            document.write('당신의 ' + age + '번째 생일을 축하 합니다. <br>');
+            age--;
+        }while(age>25); // 26까지 출력
+
+        var count=10;
+        var newy=1;
+        do{
+            document.write('카운트다운 시작! ' + count +'<br>');
+            count--;
+        }while(count>=newy);
+        document.write('<strong>해피 뉴 이어!</strong>');
+
+        var num=4;
+        do{
+            alert('경고창이 뜨네요!');
+            alert(4-num + '번째 반복');
+            num--;
+        }while(num);
+
     </script>
 </section>
 

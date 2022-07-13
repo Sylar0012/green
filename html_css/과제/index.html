@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>과제</title>
+    <title>네이버북</title>
     <meta charset="description" content="책 구매 서비스를 제공하는 웹사이트">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -14,9 +14,8 @@
         <header id="header">
             <div class="header_area">
                 <div class="header_logo">
-                    <h1>로고</h1>
                     <div class="logo"><a href="#">
-                        <img src="img/logo.png" alt="오늘의책">
+                        <h1><span>NAVER</span>책</h1>
                     </a></div><!-- .logo -->
                     <div class="service_area">
                     <ul>
@@ -51,7 +50,7 @@
                 <h3 class="inner_title">금주의 추천 도서</h3><!-- .inner_title -->
                 <div class="lst_hotbook">
                     <div class="inner_book_lst">
-                        <a href="#"><article>
+                        <article><a href="#">
                             <div class="book_exh">
                                 <div class="photo">
                                     <img src="img/hotbook/hotbook1.jpg" alt="노랜드">
@@ -63,7 +62,7 @@
                                     <li>한겨레출판사</li>
                                 </ul>    
                             </div><!-- .book_exh -->
-                        </artcle></a>
+                        </a></artcle>
                     </div><!-- inner_book_lst -->
                     <div class="inner_book_lst">
                         <article><a href="#">
@@ -73,7 +72,7 @@
                                     <span class="book_mask"></span>
                                 </div><!-- .photo -->
                                 <ul>
-                                    <li class="book_info"li>우리는 서로의 ...</li>
+                                    <li class="book_info"li>우리는 서로의 그림책입니다</li>
                                     <li>황진희</li>
                                     <li>호호아</li>
                                 </ul>    
@@ -125,20 +124,157 @@
             </div><!-- .inner -->
         </div><!-- #main_visual-->
         <div id="container">
-            <h3 class="cont_title">이번주 베스트 셀러</h3><!-- .cont_title -->
-            <div class="cont_gnb">
-                <h3>컨텐츠매뉴</h3>
-                <ul>
-                    <li class="active"><a href="#">종합</a></li>
-                    <li><a href="#">소설</a></li>
-                    <li><a href="#">시/에세이</a></li>
-                    <li><a href="#">비즈니스/경제</a></li>
-                    <li><a href="#">자기관리</a></li>
-                    <li><a href="#">역사/문화</a></li>
-                    <li><a href="#">가정/생활</a></li>
-                    <li><a href="#">어린이</a></li>
-                </ul>
-            </div><!-- .cont_gnb -->
+            <div class="cont1_header">
+                <h3 class="cont1_title">이번주 베스트 셀러</h3><!-- .cont_title -->
+                <div class="cont1_gnb">
+                    <h3>컨텐츠매뉴</h3>
+                    <ul>
+                        <li class="active"><a href="#">종합</a></li>
+                        <li><a href="#">소설</a></li>
+                        <li><a href="#">시/에세이</a></li>
+                        <li><a href="#">비즈니스/경제</a></li>
+                        <li><a href="#">자기관리</a></li>
+                        <li><a href="#">역사/문화</a></li>
+                        <li><a href="#">가정/생활</a></li>
+                        <li><a href="#">어린이</a></li>
+                    </ul>
+                </div><!-- .cont_gnb -->  
+            </div><!-- cont1_header -->    
+            <div class="cont1">
+                <ol class="bestseller_list">
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book1.jpg" alt="역행자">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">역행자</dt>
+                            <dd>자청</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book2.jpg" alt="불편한 편의점">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">불편한 편의점</dt>
+                            <dd>김호연</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book3.jpg" alt="이상한 과자 가제 전천당15">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">이상한 과자 가제 전천당15</dt>
+                            <dd>히로시마 레이코</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book4.jpg" alt="작별인사">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">작별인사</dt>
+                            <dd>김영하</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book5.jpg" alt="입지센스">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">입지센스</dt>
+                            <dd>훨훨</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book6.jpg" alt="기억력 천재 게으른 뇌를 깨워라">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">기억력 천재 게으른 뇌를 깨워라</dt>
+                            <dd>개러스 무어</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book7.jpg" alt="변화하는 세계 질서">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">변화하는 세계 질서</dt>
+                            <dd>레이달리오</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book8.jpg" alt="눈물 한 방울">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">눈물 한 방울</dt>
+                            <dd>이어령</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book9.jpg" alt="인권의 최전선">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">인권의 최전선</dt>
+                            <dd>조효제</dd>
+                        </a></dl>
+                    </li>
+                    <li>
+                        <dl><a href="#">
+                            <dt class="cont1_photo">
+                                <img src="img/cont1_photo/book10.jpg" alt="고통에 이름을 붙이는 사람들">
+                                <span class="cont1_mask">
+                                    <span class="cont1_bg1"></span>
+                                    <span class="cont1_bg2"></span>
+                                </span><!-- cont1_mask -->    
+                            </dt>
+                            <dt class="cont1_booktitle">고통에 이름을 붙이는 사람들</dt>
+                            <dd>노동환경건강연구소</dd>
+                        </a></dl>
+                    </li>
+                </ol><!-- .bestseller -->    
+            </div><!-- .cont1 -->
+
         </div><!-- #container -->
         <div id="footer"></div><!-- #footer -->       
     </div><!-- #wrap -->

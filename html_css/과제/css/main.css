@@ -14,13 +14,18 @@
     display: flex;
     justify-content:space-between;
 }
+
 #header .header_area .header_logo h1{
-    display: none;
+    line-height: 70px;
+    font-size: 30px;
+    width: 142.64px;
 }
-#header .header_area .header_logo .logo{
-    display: block;
-    justify-content: space-between;
+#header .header_area .header_logo h1 span{
+    font-weight: 900;
+    color: rgb(4, 207, 92);
+    font-size: 34px;  
 }
+
 #header .header_area .service_area{
     font-size: 0;
 }
@@ -39,7 +44,7 @@
 }
 /* service_area hover-------------------- */
 #header .header_area .service_area ul li:hover a{
-    color:#1af;
+    color: rgb(4, 207, 92);
 }
 /* ---------------------------------------- */
 #header .header_area .service_area ul li:last-child{
@@ -63,12 +68,10 @@
     flex:0 0 200px;    
 }
 /* .gub hover-------------------- */
-#header .gnb ul li:hover a{
-    color: #1af;
+#header .gnb ul li:hover a, #header .gnb ul .active a{
+    color: rgb(4, 207, 92);
 }
-#header .gnb ul .active a{
-    color:#1af;
-}
+
 /* main_visual start--------------- */
 
 /* 공통 태그 */
@@ -96,7 +99,7 @@
 }
 #main_visual .search .search_br:hover{
     border:none;
-    border-bottom: 2px solid #1af;
+    border-bottom: 2px solid rgb(4, 207, 92);
 }
 #main_visual .search label {
     background: url(../img/search.png) no-repeat ;
@@ -109,14 +112,14 @@
 #main_visual .search .dep_search p{
     width: 60px;
     line-height: 40px;
-    border: 1px solid #1af;
+    border: 1px solid rgb(4, 207, 92);
     border-radius: 7px;
     padding: 0 5px;
 }
 /* hover area--------------------- */
 
 #main_visual .search .dep_search p:hover{
-    background: #1af;
+    background: rgb(4, 207, 92);
     
 }
 #main_visual .search .dep_search:hover a{
@@ -125,7 +128,6 @@
 
 /* .inner start----------------------- */
 #main_visual .inner{
-    width: 1005px;
     margin: 0 auto;
     position: relative;
 }
@@ -134,24 +136,27 @@
     display: flex;
     justify-content: center;
     font-size: 24px;
-    margin: 40px;
+    line-height: 80px;
 }
 /* .inner .lst_hotbook start---------------- */
 #main_visual .inner .lst_hotbook{
     display: -webkit-flex;
     display: flex;
+    width: 1005px;
+    margin: 0 auto;
     justify-content: space-between;
 }
 #main_visual .inner .lst_hotbook .inner_book_lst a{
     display: block;
 }
 #main_visual .inner .lst_hotbook .inner_book_lst:hover a{
-    color: #1af;
+    color: rgb(4, 207, 92);
+    text-decoration: underline;
 }
 #main_visual .inner .lst_hotbook .inner_book_lst .book_exh{
     font-size: 0;
+    width: 140px;
 }
-
 #main_visual .inner .lst_hotbook .inner_book_lst .book_exh .photo{
     position: relative;
 }
@@ -171,7 +176,6 @@
 }
 #main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul{
     text-align: center;
-
 }
 #main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul .book_info{
     font-size: 18px;
@@ -185,11 +189,14 @@
     line-height: 14px;
     border-right: 1px solid #333;
     padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
 }
 #main_visual .inner .lst_hotbook .inner_book_lst .book_exh ul li:last-child{
     border: none;
 }
-.pagination ul {
+#main_visual .inner .pagination ul {
     display: flex;
     justify-content: center;
 }
@@ -201,15 +208,12 @@
     text-indent: -9999px;
     margin: 0 5px;
 }
-#main_visual .inner .pagination ul .active{
-    background: #1af;
-}
 #main_visual .inner .pagination ul li a{
     display: block;
 }
 /* .pagination ul li hover------------- */
-#main_visual .inner .pagination ul li:hover a{
-    background: #1af;
+#main_visual .inner .pagination ul li:hover a,#main_visual .inner .pagination ul .active{
+    background: rgb(4, 207, 92);
     width: 10px;
     height: 10px;
     border-radius: 10px;
@@ -237,37 +241,110 @@
 }
 /* btb hover----------------- */
 #main_visual .inner .btn_prev:hover, #main_visual .inner .btn_next:hover{
-    filter: opacity(0.5) drop-shadow(0 0 0 #00f);
+    filter: opacity(0.5) drop-shadow(0 0 0 #0a0);
 }
 /* #container start------------------- */
 #container{
     width: 100%;
 }
-#container .cont_title{
+#container .cont1_header{
+    margin: 0 auto;
+}
+#container .cont1_header .cont1_title{
     display: flex;
     justify-content: center;
     line-height: 90px;
-    border-bottom: 1px solid #333 ;
+    border-bottom: 1px solid #aaa ;
+    text-align: center;
 }
-#container .cont_gnb{}
-#container .cont_gnb h3{
+#container .cont1_header .cont1_gnb h3{
     display: none;
 }
-#container .cont_gnb ul{
+#container .cont1_header .cont1_gnb ul{
     display: flex;
-    border-top: 1px solid #aaa;
+
     font-size: 16px;
     line-height: 50px;
     margin: 0 auto;
     justify-content: center;
     text-align: center;
 }
-#container .cont_gnb ul li{
+#container .cont1_header .cont1_gnb ul li{
     flex:0 0 150px; 
 }
-#container .cont_gnb ul .active a{
-    color: #1af;
+#container .cont1_header .cont1_gnb ul .active a, #container .cont1_header .cont1_gnb ul li:hover a{
+    color: rgb(4, 207, 92);
 }
-#container .cont_gnb ul li:hover a{
-    color: #1af;
+/* cont1 start--------------- */
+#container .cont1{
+    width: 100%;   
+    padding: 20px 0;
+    border-top: 1px solid #333;
+
+}
+#container .cont1 .bestseller_list{
+    width: 1005px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#container .cont1 .bestseller_list li {
+    width: 197px;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+#container .cont1 .bestseller_list li dl{
+    width: 105px;
+    margin: 0 auto;
+    text-align: center;
+}
+#container .cont1 .bestseller_list li:hover a{
+    color: rgb(4, 207, 92);  
+}
+#container .cont1 .bestseller_list li dl dt{
+    position: relative;
+    font-size: 18px;
+    display: block;
+}
+#container .cont1 .bestseller_list li dl  .cont1_photo{
+    margin-bottom: 10px;
+}
+
+#container .cont1 .bestseller_list li dl .cont1_photo .cont1_mask{
+    background: url(../img/sp_thumb_all.png) no-repeat 0;
+    width: 105px;
+    height: 150px;
+    position: absolute;
+    z-index: 200;
+    top: -2px;
+    left: 0;   
+}
+#container .cont1 .bestseller_list li dl .cont1_photo .cont1_mask .cont1_bg1{
+    background: url(../img/sp_thumb_all2.png) no-repeat 0;
+    width: 6px;
+    height: 4px;
+    position: absolute;
+    border: 1px solid #fff;
+    border-end-start-radius: 3px;
+    z-index: 0;  
+    top: 0;
+    right: 0;
+}
+#container .cont1 .bestseller_list li dl .cont1_photo .cont1_mask .cont1_bg2{
+    background: url(../img/sp_thumb_all3.png) no-repeat 0;
+    width: 105px;
+    height: 150px;
+    position: absolute;
+    z-index: 291;   
+    top: 0;
+    left: 0;   
+}
+#container .cont1 .bestseller_list li dl .cont1_booktitle, #container .cont1 .bestseller_list li dl dd{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   
+}
+#container .cont1 .bestseller_list li dl dd{
+    font-size: 14px;
 }

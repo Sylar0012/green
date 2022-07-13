@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성전자1</title>
+    <meta charset="description" content="삼성전자 제품 서비스를 제공하는 웹사이트">
+    <!-- 사이트의 특징을 적어둠 -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header><!-- #header -->
+        <div id="main_visual"></div><!-- #main_visual-->
+        <div id="container"></div><!-- #container -->
+        <div id="footer"></div><!-- #footer -->       
+    </div><!-- #wrap -->
+</body>
+</html>
+
+1. 크게 먼저 잡고 시작 잡아놓은 #id .class는 웹표준
+
+<header id="header"><!-- #header -->
+    <h1 class="logo"><a href="#">
+        삼성전자
+    </a></h1><!-- .logo -->
+    <nav class="gnb"></nav><!-- navigation grobal navigation bar -->
+</header>
+
+h1제목 안 a태그 
+
+<nav class="gnb">
+    <h2>메인메뉴</h2>
+    <ul>
+        <li><a href="#">브랜드스토리</a></li>
+        <li><a href="#">서비스안내</a></li>
+        <li><a href="#">제품소개</a></li>
+        <li><a href="#">프로모션</a></li>
+        <li><a href="#">고객의소리</a></li>
+    </ul>
+</nav><!-- navigation grobal navigation bar -->
+
+h2는 주요 매뉴구성에 사용. (웹표준성)매뉴구성은 nav태그 안 ul li태그 
+
+<div id="main_visual">
+    <div class="inner">  
+    </div><!-- .inner -->
+</div><!-- #main_visual-->
+
+inner > 실제 컨텐츠 영역 여러개 쓸수도 잇음
+
+<div class="inner">
+    <div class="mv_txt">
+    </div><!-- .mv_txt -->
+</div><!-- .inner -->
+<p class="btn_prev"><a href="#">
+    이전
+</a></p><!-- .btn_prev -->
+<p class="btn_next"><a href="#">
+    다음
+</a></p><!-- .btn_next -->
+mv_txt 메인 텍스트
+btn_~ > 버튼_이전 다음
+
+<div class="mv_txt">
+    <p class="tit">
+        <strong>Samsung Care+</strong><br>
+        걱정은 덜고 안심은 더하세요!
+    </p><!-- .tit -->
+    <p class="more"><a href="#"></a>
+        자세히보기
+    </a></p><!-- .more -->
+</div><!-- .mv_txt -->
+
+<div class="inner">
+    <div class="mv_txt">
+        <p class="tit">
+            <strong>Samsung Care+</strong><br>
+            걱정은 덜고 안심은 더하세요!
+        </p><!-- .tit -->
+        <p class="more"><a href="#">
+                자세히보기
+            </a></p><!-- .more -->
+    </div><!-- .mv_txt -->
+    <p class="btn_prev"><a href="#">
+        이전
+    </a></p><!-- .btn_prev -->
+    <p class="btn_next"><a href="#">
+        다음
+    </a></p><!-- .btn_next -->
+</div><!-- .inner -->
+
+prev next 버튼 좌우 배치시 .inner에 포지션 먹여서 기준으로 만듦
+
+
+<div id="container">
+    <section class="cont01"></section>
+    <section class="cont02"></section>
+</div><!-- #container -->
+
+section으로 나눔.
+
+<div class="product">
+    <article><a href="#">
+        <div class="photo"></div><!-- .photo -->
+        <dl>
+            <dt></dt>
+            <dd></dd>
+        </dl>
+    </a></article>
+</div><!-- .product -->
+
+ul li 태그 사용해도 되나 다른 방식으로 사용. (주로 사용하는 방식인듯)
+
+<div class="photo">
+    <img src='https://via.placeholder.com/580x400'>
+</div><!-- .photo -->
+
+https://via.placeholder.com/580x400 
+    ㄴ 더미사진으로 영역 표시. 가로x세로
+
+<article><a href="#">
+    <div class="photo">
+        <img src='https://via.placeholder.com/580x400'>
+    </div><!-- .photo -->
+    <dl>
+        <dt>제품명1</dt>
+        <dd>제품 상세설명 입니다.</dd>
+    </dl>
+</a></article>
+<article><a href="#">
+    <div class="photo">
+        <img src='https://via.placeholder.com/580x400'>
+    </div><!-- .photo -->
+    <dl>
+        <dt>제품명2</dt>
+        <dd>제품 상세설명 입니다.</dd>
+    </dl>
+</a></article>
+와 같이 목록 작성
+
+<section class="cont02">
+    <div class="inner">
+        <h3 class="cont_tit" >주요 서비스 안내</h3><!-- .cont_tit -->
+    </div><!-- .inner -->
+</section><!-- .cont02 -->
+
+주요서비스 안내는 베스트제품 이라는 타이틀과 같은 설정이라 클래스명 같음.
+
+<h3 class="cont_tit" >주요 서비스 안내</h3><!-- .cont_tit -->
+<div class="service">
+    <article><a href="#">
+        <div class="photo">285x300</div><!-- .photo -->
+        <dl>
+            <dt>챗봇상담</dt>
+            <dd>챗봇상담 상세설명</dd>
+        </dl>
+    </a></article>
+
+article을 사용해서 묶어줌
+
+<div id="footer">
+    <div id="footer_inner">
+        <div class="flogo"><a href="#">
+            삼성전자
+        </a></div><!-- .flogo -->
+        <div class="footer_info"></div><!-- .footer_info -->
+        <div class="family"></div><!-- .family -->
+    </div><!-- #footer_inner -->
+</div><!-- #footer -->       
+
+footer 구조
+
+<div class="footer_info">
+    <div class="fmenu"></div><!-- .fmenu -->
+    <address class="finfo"></address><!-- .finfo -->    
+    <div class="copy"></div><!-- .copy -->
+</div><!-- .footer_info -->
+
+footer_info 세부구조
+
+<div class="fmenu">
+    <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+        <li><a href="#">사이트맵</a></li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">아용가이드</a></li>
+    </ul>
+</div><!-- .fmenu -->
+
+일자로 배치시 ul li
+
+<address class="finfo">
+    <p>
+        <span>주소: 경기도 수원시 영통구 삼성로 290 삼성전자서비스주식회사</span>
+        <span>대표이사 : 송봉섭</span>
+    </p>
+    <p>
+        <span>사업자등록번호 : 124-81-58485</span>
+        <span>대표전화 : 1588-3366(통화요금 : 발신자 부담)</span>
+    </p>
+</address><!-- .finfo -->    
+
+웹 표준성 때문에 나눠서 작성. address태그 사용시 글꼴 기울임 적용됨.
+reset.css 에서 address{font-style:normal;}로 처리해줘야 함
+
+<div class="copy">
+    <span>Copyright &copy; SAMSUNG ELECTRONICS SERVUCE CO., Ltd. All rights reserved.</span>
+</div><!-- .copy -->
+
+ⓒ = &copy;
+
+<div class="family"><a href="#">
+    Family Site
+</a></div><!-- .family -->
+
+마지막 부분
+
+
+header 와 footer는 높이지정을 해주는게 좋음
+사이트 내부의 다른곳으로 이동해도 header와 footer는 바뀌지 않기 떄문.

@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+#wrap{}
+
+/* header start---------- */
+
+#header{
+    height: 70px;
+    border-bottom: 1px solid #bbb;
+    background: #aee;
+}
+#header_inner{
+    width: 1200px;
+    height: 70px;/* header 랑 높이 맞춤 */
+    margin: 0 auto;/* 가로중앙 */
+    background: #eee;   
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;/* 세로중앙 */
+}
+.logo{
+    letter-spacing: -1px;
+    /* 
+    letter-spacing : 자간(글자와 글자 사이의 간격)을 줄여줌 
+    양수는 간격이 넓어지고 음수는 좁아짐.(음수는 많이주면 글자 겹침)
+    보통 소숫점 단위로 씀
+    */
+}
+.logo span{
+    font-weight: normal;
+    font-size: 28px;
+}
+.gnb h2{
+    display: none;
+}
+.gnb ul{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    /* 
+    공간을 지정해서 잡으면 나중에 틀어지는게 없어짐 
+    flex: 쓰면 붙음(background 색입혀서 확인)
+    */
+}
+.gnb ul li{
+    width: 70px;
+    background: #eaa;
+    text-align: center;
+}
+
+.gnb ul li:hover a{
+    font-weight: 700;
+    text-decoration: underline;
+    /* border-bottom:1px solid #333; */
+    /* border는 1px이라는 값을 가지고 있어서 하단부가 밀림 */
+}
+.utill ul li{
+    display: inline-block;
+    margin-left: 15px;
+    /* 
+    사이트 구조상 왼쪽에 컨텐츠가 붙어있지 않아 왼쪽으로 줌 
+    오른쪽으로 주면 오른쪽 벽에 안붙고 뜸
+    */
+}
+.utill ul li a:hover{
+    color:#1d4;
+    /* 하위 포함관계 depth구조가 없으므로 a에 바로 적용가능. */
+}
+
+/* #main_video start ---------------------- */

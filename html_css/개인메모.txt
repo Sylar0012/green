@@ -88,4 +88,8 @@ background 배경:
       reset.css > 초기화설정 css
       main.css > 스타일 css
 
-      https://noonnu.cc/<상업 목적 사용가능 무료폰트
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;   
+
+상위 태그width보다  글씨 길이가 길 경우 맞춰서 줄여줌
