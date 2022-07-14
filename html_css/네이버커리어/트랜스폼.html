@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼</title>
+    <link href="css/reset.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 
+        == css3의 모양 변형속성 transform ==
+        transform 속성 
+        태그의 크기, 회전, 위치, 기울기를 변형시킬 수 있는 속성.
+        스크립트 js를 사용하지 않고, css만으로 구현이 가능함.
+        2D, 3D의 형태로 변형도 가능함.
+
+        * 호환성을 위해 밴더프리픽스 붙여서 사용 권장.
+     -->
+<h2>위치 이동</h2>
+    <div>
+        {transform:translateX(이동거리)} : 가로 이동거리
+        {transform:translateY(이동거리)} : 세로 이동거리
+        {transform:translate(x,y)} : x축 y축 한번에 이동거리
+
+        - 이동거리 : px, %
+        - % 단위(상대값) 작성할 경우 현재 태그의 크기를 기준으로 비례적용됨.
+    </div>
+    <div id="box">
+        <p class="p1">위치이동</p>
+
+    </div>
+    <style>
+        #box{
+            height: 300px;
+            padding: 30px;
+            background: #cdd;
+        }
+        #box .p1{
+            width: 100px;
+            height: 100px;
+            background: #fa0;
+            transition:5s
+        }
+        #box .p1:hover{
+           /* transform: translateY(100px); */
+            /* transform:translateX(-50%); */
+            /* p1 태그의 px의 절반만큼 움직임 */
+            /* margin-left: -50px; */
+            /* margin을 쓰려면 컨탠츠의 정확한 값을 알아야함 */
+            transform:translate(-50%,-50%);
+
+        }
+    </style>
+    <h2>회전</h2>
+    <div>
+        {transform:rotate(45deg)} : 오른쪽 방향으로 45도 각도로 회전, 양수 오른쪽, 음수 왼쪽
+    </div>
+    <div id="box">
+        <p class="p2">회전하기</p>
+    </div>
+    <style>
+        #box .p2{
+            width: 150px;
+            height: 150px;
+            background: #2a0;
+            transition: 500ms
+            /* transform에 속도감 줌 */
+        }
+        #box .p2:hover{
+            transform:rotate(360deg);
+        }
+    </style>
+    <h2>css3의 transition</h2>
+    <!-- 
+        css 속성값의 변경을 통해 시간차를 두고 움직임 및 변경을 적용시키는 속성.
+        : 색상변화, 움직임변화, 보임효과, 모양변화, 위치변경등 .. 
+        변화를 시간을 두고 적용할때 사용함
+        => 마우스 hover 움직임 및 인터랙션 효과 구현시 많이 사용
+        
+        변화대상{transition:css속성 시간}
+            - 시간 초단위 (1s)
+              웹에서는 user가 체감상 1초도 긴시간으로 생각되기 때문에 1초보다 작은 단위를 주로 사용
+              0.5s 0.25s 0.3s ...
+
+        - transition 속성으로 적용할 수 있는 움직임은 css속성의 값을 "숫자" 또는 "색상단위"로 적용할수 있는 움직임은 css 속성값으로 가능함.
+        
+        - css속성의 값이 문자일 경우 불가능 (display:block; 같은거)
+     -->
+     <div class="tr1">색상변화</div>
+     <br>
+     <div class="tr2">
+        <p>움직임 변화</p>
+     </div>
+     <div class="tr3">
+        <p>보임효과</p>
+     </div>
+     <div class="tr4">
+        <img src="img/img_01.png">
+     </div>
+     <style>
+        div{
+            margin: 20px 0;
+        }
+        .tr1{
+            height: 100px;
+            background: #ff3;
+            transition: background 1s;
+            /* 백그라운드 색 변경 */
+            
+        }
+        .tr1:hover{
+            background: #f00;
+    
+        }
+        .tr2{
+            background: #ccc;
+        }
+        .tr2 p{
+            width: 100px;
+            height: 100px;
+            background: #fb0;
+            transition: margin-left 2s;
+        }
+        .tr2:hover p{
+            margin-left: 500px;
+        }
+        .tr3{
+            background: #fce;
+            height: 100px;
+            /* display:none; 때문에 공간값 줘야함 */
+        }
+        .tr3 p{
+            width: 100px;
+            height: 100px;
+            background: #00f;
+            /* display: none; */
+             /* display를 transition으로 설정 할수 없음 */
+            opacity: 0;
+            /* opacity : 값 >값만큼 투명해짐 0(투명)~1(불투명) */
+            transition: opacity 1s;
+           
+        }
+        .tr3:hover p{
+              /* display: block; */
+            opacity: 1;
+        }
+
+        .tr4{
+            width: 200px;
+            height: 200px;
+            border-radius: 40px;
+            /* overflow: hidden; */
+            /* 
+            overflow: hidden; 영역안에 넘치는 컨텐츠 가려줌 
+            값을 안쓰면 튀어나오는 느낌
+            */
+
+        }
+        .tr4 img{
+            width: 200px;
+            height: auto;
+            transition: transform 1s;
+        }
+        .tr4:hover img{
+            transform:scale(1.2);
+            /* 
+            사진이 커짐 (확대하는 느낌) 
+            보통 1.125~1.2사이값 줌
+            */
+        }
+     </style>
+     
+
+</body>
+</html>
