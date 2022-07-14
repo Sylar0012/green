@@ -34,6 +34,7 @@
     align-items: left;
     text-align: center;
     width: 400px;
+ 
 }
 #header .header_area .service_area ul li{
     font-size: 16px;
@@ -53,6 +54,7 @@
 #header .gnb{
     width: 100%;
     text-align: center;
+
 }
 #header .gnb h2{
     display: none;
