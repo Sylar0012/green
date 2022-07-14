@@ -90,6 +90,11 @@ poster     : 영상 로딩시 대체 이미지.
     width: 100%;
     height: 680px;
     position: relative;
+    overflow: hidden;
+    /* 
+    전체화면일때 하단부에 스크롤바 생기면 코딩 오류
+    overflow: hidden; 으로 치워야함
+    */
 }
 .mv video{
     width: 100%;
@@ -104,12 +109,61 @@ poster     : 영상 로딩시 대체 이미지.
     transform:translate(가로,세로); : 현재 태그의 위치를 옮겨줌
     (margin-left : -현재태그의 값 절반; 과 비슷하나 값을 모르면 위의 방식대로 해야함.) 
     */
-
+}
+.mv_txt{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     /* 
+    top :50% 입력시 50%위치에서 시작하므로 세로중앙 안맞음
+     transform: translateY(-50%); 로 세로중앙 잡아줘야함.
+    */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /* 
+    position : 독립 분리되는 특성. width값 인식이 안되서 width:100%로 지정
+    .mv_txt는 인라인요소로 구성되어 있어서 text-align : center로 가로중앙정렬가능 
+    */
     
+}
+.mv_txt h3{
+    font-size: 100px;
+    line-height: 100px;
+    color:#fff;
+    text-shadow: 10px 10px 10px rgba(255, 255, 255, 0.4 );
+    /*text-shadow : 가로 세로 번짐 색깔  */
+    /* rgba :  ( r, g, b, a(투명도)*/
+    /*
+    == css3의 그림자 속성 ==
+    {text-shadow : 가로 세로 번짐 색깔;}
+    + : 오른쪽/ 아래
+    -  : 왼쪽   / 위로 
     */
 }
-.mv video{}
-.mb_txt{}
-.mb_txt h3{}
+.apply{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-150px, 80px );
+    width: 0;
+    transition: width 0.5s;
+    /* .apply에 width0주고 아래 hover에 width값 줘서 hover하면 width가 생기게 함 */
+}
+.apply:hover{
+    width: 302px;
+    background: #fff;
+}
+.apply a{
+    display: block;
+    width: 300px;
+    height: 60px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    line-height: 60px;
+}
+.apply:hover a{
+    color:#1d4;
+}
 .mv_ad{}
