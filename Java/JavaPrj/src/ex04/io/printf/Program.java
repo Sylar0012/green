@@ -1,4 +1,4 @@
-package ex4.io.printf;
+package ex04.io.printf;
 public class Program{
 	public static void main(String[] args) {
 		
@@ -12,14 +12,14 @@ public class Program{
 		
 		total = kor1 + kor2 + kor3;
 		//avg = total/3; // 계산하면 소수점이 날아감. ( 정수 / 정수 계산하면 소수점은 버려짐)
-		avg = total / 3.0f;
+		avg = total / 3.0f; // 묵시적 형변환 이용 avg는 float값이니 나누는 수를 float로 하면 190도 float로 바뀜
 		// total/3.0; => 3.0이 double이 됨 에러는 나지만 계산은 됨(계산하면 소숫점이 짤리기 떄문에 에러)
 		// ( 묵시적 허용으로 190 = > 190.0d )
 		
 		// (float)total/3.0 => (float)total 먼저 실행 후 그값을 3.0과 나눠서 에러가 발생
 		// (float)totla = 190.0f => 190.0f / 3.0d => 형변환 => 190.0d / 3.0d avg = 63.33d => avg는 float 써서 손실난다고 에러 발생.
 		
-		// (float)(total / 3.0) => 뒤에 식 계산한걸 float으로 바꾸라 지시해서 에러 안남.
+		// (float)(total / 3.0) => 뒤에 식 계산한걸 float으로 바꾸라 지시해서 에러 안남. (명시적 형변환)
 		
 		// 받는게 float이면 나누는것도 float으로 바꾸면 더편함 ㅋㅋ
 		

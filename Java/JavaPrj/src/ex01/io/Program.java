@@ -1,4 +1,4 @@
-package ex1.io;
+package ex01.io;
 
 public class Program {
 
