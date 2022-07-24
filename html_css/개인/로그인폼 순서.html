@@ -15,10 +15,12 @@
 선 로고
 
 <form class="box">
-    <legend>로그인 정보</legend>
-    <ul>
-        <li class="login"></li>
-    </ul>
+    <fieldset id="f1">
+        <legend>로그인 정보</legend>
+        <ul>
+            <li class="login"></li>
+        </ul>
+    </fieldset>
 </form><!-- .box -->
 
 legend 는 css로 가림
@@ -67,3 +69,61 @@ legend 는 css로 가림
 
 묶어주기
 
+<li class="btn_login">
+    <input type="submit" value="로그인" id="btnlog" name="btnlog">
+    <label for="btnlog">로그인버튼</label>
+</li>
+
+로그인 버튼
+
+css---
+fieldset{
+    border:none;
+}
+legend{
+    display: none;
+}
+.login{
+}
+.login input{
+    width: 100%;
+    border: none;
+    background: none;
+}   
+label{
+    display: none;
+}
+
+기본 디자인 초기화
+
+-----------------
+
+<div id="footer_inner">
+    <div class="fmenu"></div><!-- .fmenu -->
+    <div class="down"></div><!-- .down -->
+</div><!-- #footer_inner -->
+
+footer 하단 틀
+ 페이지 하단에 붙일예정
+
+<div class="fmenu">
+    <div class="more">
+        <a href="#" class="btn">More Pikicast</a>
+    </div><!-- .more -->
+</div><!-- .fmenu -->
+
+하단에 More Pikicast hover하면 매뉴 위로 올라오게 하려고 잡음
+a태그에 css먹여야 해서 class 줌
+
+<a href="#">More Pikicast</a>
+                        <div class="list">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">피키와저작권</a></li>
+                                <li><a href="#">신고기능안내</a></li>
+                                <li><a href="#">고객센터</a></li>
+                            </ul>
+                        </div><!-- .list -->
+
+내용물
