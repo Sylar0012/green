@@ -1,0 +1,19 @@
+package ex05;
+
+public class VarEx01 {
+
+	public static void main(String[] args) {
+		int n1 = 10; // int는 4byte로 저장, 42억 9천개의 숫자 표현가능 ( 음수 포함 )
+		// int n2 = 3000000000; 42억 9천 안이지만 음수 양수 합쳐서 42억 9천개라 에러남 
+		
+		System.out.println(n1); 
+		
+		double d1 = 10.5; // 8byte. 실수를 표현할때 씀
+		
+		System.out.println(d1);
+		
+		
+
+	}
+
+}

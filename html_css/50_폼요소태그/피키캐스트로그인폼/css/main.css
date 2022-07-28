@@ -19,7 +19,10 @@ html, body{
     주로쓰는 방식 (고해상도 모니터도 커버가능)
      */
     /* object-fit: cover; */
-}   
+}  
+#f1{
+    border: none;
+} 
 /* 
 object-fit : img, video, object, svg등 비율이 유지되는 요소들에게 사용하는 속성
 object-fit : 
@@ -54,4 +57,116 @@ fill : 요소 가득 채울 수 있도록 가로, 세로 강제 지정(비율x)
     border: 1px solid #fff;
     border-radius: 5px;
     padding : 45px 45px 40px 45px;
+}
+fieldset{
+    border:none;
+}
+legend{
+    display: none;
+}
+.login{
+    border-bottom: 2px solid #333;
+}
+.login input{
+    width: 100%;
+    border: none;
+    background: none;
+    height: 60px;/* line-height 안쓰고 그냥 함 */
+    padding-left: 10px;/* 로그인 박스안 내용 띄우기 */
+    box-sizing: border-box;
+    /* 
+    박스의 사이즈를 width값 height값 자동 조절  
+    안쓰면 공간이 틀어짐 (padding때문에 100% + 10px 인 상태)
+    */
+}   
+.login label{
+    display: none;
+}
+.check{
+    font-size: 14px;
+    padding: 14px 0;
+}
+.check label{
+    display: inline-block;
+    margin: 0 30px 0 0;
+}
+.check input[type="checkbox"]{
+    /* [type = "checkbox"] : 속성선택자. 해당 속성을 가진 태그 전부 적용 */
+    margin: 3px 5px 0 0;
+}
+/* 
+== 폼 요소 입력양식태그 가상클래스 선택자 ==
+input:checked{} : 체크박스 일 경우 체크지정
+input:focus{} : 텍스트 일 경우 포커스 지정(미리 입력할곳 지정해줌)
+input:enabled{} : 사용 가능한폼
+input: disabled{} : 사용 불가능한 폼
+
+== 속성 선택자 ==
+: 특정 속성 or 속성값 태그 선택시 []지정.
+*/
+
+.btn_login input{
+    width: 100%;
+    height: 55px;
+    color:#fff;
+    background: #0af;
+    border: none;
+    font-size: 16px;
+    cursor:pointer;
+    /* 마우스커서 손가락모양으로 (a태그 처럼) */
+}
+#footer{
+    width: 100%;
+    height: 35px;
+    background: #333;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    /* 
+    position: fixed; left: 0; bottom: 0;
+    페이지 하단에 위치하게함 
+    fixed는 브라우저 자체를 기준으로 잡아서 position: relative; 필요없음
+    */
+}
+#footer_inner{
+    width: 1024px;
+    background: #08e;
+    margin: 0 auto;
+}
+.fmenu{}
+.fmenu .more{
+    width: 140px;
+    background: #fed;
+}
+.fmenu .more .btn{
+    display: block;
+    height: 18px;
+    padding: 8.5px 0 8.5px 20px;
+    background: url(../img/icon_arr.png) no-repeat right 0;
+}
+.fmenu .more:hover .btn{
+    background-position : right -35px;
+    /* 
+    background-position 
+    :  background: url(../img/icon_arr.png) no-repeat 값 고정하고 사진 위치만 바꿈  
+    */
+}
+
+.fmenu .more .list{
+    width: 138px;
+    background: #fff;
+    border: 1px solid #eee;
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    padding: 12px 0;
+    display: none;
+}
+.fmenu .more:hover .list{
+    display: block;
+}
+.fmenu .more .list li a{
+    display: block;
+    padding: 10px 20px;
+    /* 모바일 환경 고려해서 넉넉하게 줌 */
 }
