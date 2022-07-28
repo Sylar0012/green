@@ -1,0 +1,22 @@
+package ex06;
+
+import java.util.Scanner;
+
+public class asd {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int x;
+		int n;
+		
+		System.out.print("몇줄짜리?");
+		n = scan.nextInt();
+		
+		for(int i = n; 0<i; i-- ) 
+			System.out.print("*");
+		
+		
+		
+	}
+}

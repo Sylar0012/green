@@ -1,0 +1,15 @@
+package ex05;
+
+//증가식 감소식
+public class OperEx04 {
+	
+	public static void main(String[] args) {
+		
+		int num = 1;
+		num = 2;
+		System.out.println(num);
+		
+	}
+
+
+}

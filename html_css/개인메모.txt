@@ -93,3 +93,11 @@ overflow: hidden;
 text-overflow: ellipsis;   
 
 상위 태그width보다  글씨 길이가 길 경우 맞춰서 줄여줌
+
+
+프론트
+
+안드는 자바 또는 코들린 으로 애플은 스위프트로 프론트 구성함
+
+flutter : 브라우저, 모든 단말기기(폰, 데스크탑 등)에 프론트 가능.
+

@@ -1,0 +1,21 @@
+package ex06;
+
+public class Gugudan {
+	
+	public static void main(String[] args) {
+		
+		String s1 = "안녕";
+		int num = 10;
+		System.out.println(s1+num);
+		System.out.println("num : "+num);
+		
+		for (int j=2; j<10; j++) {
+			System.out.println("------- "+j+"단 시작 -------");
+			for(int i =1; i<10; i++) { 
+				System.out.println(j + "x"+ i + "=" + j*i );
+			}
+	
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+package ex06;
+
+public class Gugudan {
+	
+	public static void main(String[] args) {
+		
+		String s1 = "안녕";
+		int num = 10;
+		System.out.println(s1+num);
+	}
+
+}
