@@ -44,6 +44,7 @@ public class Program2{
 						do {
 							System.out.printf("%d학년 국어 %d 점수 입력 : " ,j+1, i+1,kors);
 							kors[j][i] = scan.nextInt(); 
+							
 							if (kors[j][i]<0 || 100<kors[j][i])
 								System.out.println("성적범위 ( 0 ~ 100 )를 벗어났습니다.");	
 							
@@ -61,19 +62,16 @@ public class Program2{
 					System.out.printf("<%d학년의 국어 성적>-------------\n", j+1);
 					total = kors[j][0]+kors[j][1]+kors[j][2]; 
 					avg =total/3.0f;
-					
-					
 															
 					for(int i=0; i<3; i++)  				
 					
-						System.out.printf("\t국어%d : %3d\n",i+1, kors[j][0]);
+						System.out.printf("\t국어%d : %3d\n",i+1, kors[j][i]);
 						
 						System.out.printf("\t총점  : %3d\n", total);
 						System.out.printf("\t평군  : %5.2f\n", avg); 
 		
 						System.out.println("────────────────────────────");	
 					
-				
 				}
 				break;
 				
